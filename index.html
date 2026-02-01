@@ -272,6 +272,101 @@
       .nav{justify-content:center;}
       .card{grid-column:span 12;}
     }
+
+    /* =========================================================
+       Templates de Reports (ADICIONADO)
+       ========================================================= */
+    .templates-grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:16px;
+      margin-top:16px;
+    }
+
+    .template-card{
+      grid-column:span 4;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:14px;
+      box-shadow:0 14px 38px rgba(0,0,0,.22);
+      backdrop-filter:blur(10px);
+      transition:.16s ease;
+      min-height:150px;
+    }
+
+    .template-card:hover{
+      transform:translateY(-4px);
+      background:rgba(255,255,255,.10);
+      border-color:rgba(243,168,35,.35);
+    }
+
+    .template-btn{
+      width:100%;
+      border:0;
+      background:transparent;
+      padding:0;
+      cursor:zoom-in;
+    }
+
+    .template-btn img{
+      width:100%;
+      height:auto;
+      border-radius:14px;
+      display:block;
+    }
+
+    .template-card h3{
+      margin:12px 0 6px;
+      font-size:1.08rem;
+      font-weight:800;
+    }
+
+    .template-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    /* Lightbox */
+    .lb{position:fixed;inset:0;display:none;z-index:9999;}
+    .lb[aria-hidden="false"]{display:block;}
+    .lb-backdrop{position:absolute;inset:0;background:rgba(2,6,23,.65);}
+    .lb-content{
+      position:relative;
+      max-width:min(1100px, calc(100vw - 32px));
+      max-height:calc(100vh - 32px);
+      margin:16px auto;
+      background:#fff;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 24px 60px rgba(0,0,0,.35);
+    }
+    .lb-title{
+      padding:12px 14px;
+      font-weight:800;
+      color:#0b2a5b;
+      border-bottom:1px solid #eef2f7;
+    }
+    .lb-img{width:100%;height:auto;display:block;}
+    .lb-close{
+      position:absolute;right:10px;top:6px;
+      width:36px;height:36px;
+      border-radius:10px;
+      border:1px solid #e5e7eb;
+      background:#fff;
+      cursor:pointer;
+      font-size:22px;
+      line-height:1;
+    }
+
+    /* Responsive templates */
+    @media (max-width:920px){
+      .template-card{grid-column:span 12;}
+    }
+    @media (min-width:921px) and (max-width:1100px){
+      .template-card{grid-column:span 6;}
+    }
   </style>
 </head>
 
@@ -345,46 +440,111 @@
         </p>
       </div>
 
-     <div class="grid">
+      <div class="grid">
 
-  <!-- 1 -->
-  <div class="card">
-    <h3><span class="pill">🎯</span> Análise de Custos</h3>
-    <p>Validação de faturação, controlo de margens e análise de custos com visão global do negócio.</p>
-  </div>
+        <!-- 1 -->
+        <div class="card">
+          <h3><span class="pill">🎯</span> Análise de Custos</h3>
+          <p>Validação de faturação, controlo de margens e análise de custos com visão global do negócio.</p>
+        </div>
 
-  <!-- 2 -->
-  <div class="card">
-    <h3><span class="pill">🧩</span> Integração &amp; Normalização de Dados</h3>
-    <p>Consolidação de dados de várias fontes com normalização e regras de negócio bem definidas, garantindo consistência e fiabilidade.</p>
-  </div>
+        <!-- 2 -->
+        <div class="card">
+          <h3><span class="pill">🧩</span> Integração &amp; Normalização de Dados</h3>
+          <p>Consolidação de dados de várias fontes com normalização e regras de negócio bem definidas, garantindo consistência e fiabilidade.</p>
+        </div>
 
-  <!-- 3 -->
-  <div class="card">
-    <h3><span class="pill">⚙️</span> ETL &amp; Modelação de Dados</h3>
-    <p>Processos ETL robustos e escaláveis, alinhados com boas práticas, para criar uma base sólida para análise e crescimento.</p>
-  </div>
+        <!-- 3 -->
+        <div class="card">
+          <h3><span class="pill">⚙️</span> ETL &amp; Modelação de Dados</h3>
+          <p>Processos ETL robustos e escaláveis, alinhados com boas práticas, para criar uma base sólida para análise e crescimento.</p>
+        </div>
 
-  <!-- 4 ⬅️ ESTE É O NOVO -->
-  <div class="card">
-    <h3><span class="pill">📐</span> Definição de KPIs &amp; Métricas</h3>
-    <p>Tradução de objetivos de negócio em indicadores claros, consistentes e alinhados com a estratégia da organização.</p>
-  </div>
+        <!-- 4 -->
+        <div class="card">
+          <h3><span class="pill">📐</span> Definição de KPIs &amp; Métricas</h3>
+          <p>Tradução de objetivos de negócio em indicadores claros, consistentes e alinhados com a estratégia da organização.</p>
+        </div>
 
-  <!-- 5 -->
-  <div class="card">
-    <h3><span class="pill">📊</span> Dashboards Power BI</h3>
-    <p>Indicadores de gestão claros e consistentes para vendas, logística, stocks e direção, com governação e definição de métricas.</p>
-  </div>
+        <!-- 5 -->
+        <div class="card">
+          <h3><span class="pill">📊</span> Dashboards Power BI</h3>
+          <p>Indicadores de gestão claros e consistentes para vendas, logística, stocks e direção, com governação e definição de métricas.</p>
+        </div>
 
-  <!-- 6 -->
-  <div class="card">
-    <h3><span class="pill">🖥️</span> Suporte Técnico &amp; Infraestrutura</h3>
-    <p>Apoio na definição de infraestrutura, equipamentos, software e serviços associados ao desenvolvimento e operação das soluções BI.</p>
-  </div>
+        <!-- 6 -->
+        <div class="card">
+          <h3><span class="pill">🖥️</span> Suporte Técnico &amp; Infraestrutura</h3>
+          <p>Apoio na definição de infraestrutura, equipamentos, software e serviços associados ao desenvolvimento e operação das soluções BI.</p>
+        </div>
 
-</div>
+      </div>
+    </section>
+    <!-- ^^^ (ADICIONADO) fecho do #servicos para manter HTML válido -->
 
+    <!-- Templates de Reports (ADICIONADO) -->
+    <section class="section" id="templates">
+      <div class="section-head">
+        <h2>Templates de Reports</h2>
+        <p class="lead">
+          Exemplos demonstrativos de dashboards Power BI (dados ilustrativos) — clique para ampliar.
+        </p>
+      </div>
+
+      <div class="templates-grid">
+
+        <article class="template-card">
+          <button class="template-btn" data-full="assets/templates/administracao.webp" data-title="Dashboard Executivo">
+            <img src="assets/templates/administracao.webp" alt="Template ThinkBI — Dashboard Executivo" loading="lazy">
+          </button>
+          <h3>Dashboard Executivo</h3>
+          <p>KPIs de gestão, evolução, performance por região/segmento.</p>
+        </article>
+
+        <article class="template-card">
+          <button class="template-btn" data-full="assets/templates/comercial.webp" data-title="Análise Comercial e Vendas">
+            <img src="assets/templates/comercial.webp" alt="Template ThinkBI — Análise Comercial e Vendas" loading="lazy">
+          </button>
+          <h3>Análise Comercial e Vendas</h3>
+          <p>Vendas, funil, produto, top clientes e mapa por região.</p>
+        </article>
+
+        <article class="template-card">
+          <button class="template-btn" data-full="assets/templates/controlo-financeiro.webp" data-title="Controlo Financeiro e Margens">
+            <img src="assets/templates/controlo-financeiro.webp" alt="Template ThinkBI — Controlo Financeiro e Margens" loading="lazy">
+          </button>
+          <h3>Controlo Financeiro e Margens</h3>
+          <p>Receitas vs custos, margem líquida, desvios e análise mensal.</p>
+        </article>
+
+        <article class="template-card">
+          <button class="template-btn" data-full="assets/templates/logistica.webp" data-title="Logística e Operações">
+            <img src="assets/templates/logistica.webp" alt="Template ThinkBI — Logística e Operações" loading="lazy">
+          </button>
+          <h3>Logística e Operações</h3>
+          <p>Envios, custo médio por envio, SLA e taxa de atrasos.</p>
+        </article>
+
+        <article class="template-card">
+          <button class="template-btn" data-full="assets/templates/qualidade-dados.webp" data-title="Qualidade de Dados">
+            <img src="assets/templates/qualidade-dados.webp" alt="Template ThinkBI — Qualidade de Dados" loading="lazy">
+          </button>
+          <h3>Qualidade de Dados</h3>
+          <p>Completude, erros, origem e histórico de validação.</p>
+        </article>
+
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lb" id="lb" aria-hidden="true">
+        <div class="lb-backdrop" data-close="1"></div>
+        <figure class="lb-content" role="dialog" aria-modal="true" aria-label="Pré-visualização do template">
+          <button class="lb-close" type="button" aria-label="Fechar" data-close="1">×</button>
+          <figcaption class="lb-title" id="lbTitle"></figcaption>
+          <img class="lb-img" id="lbImg" alt="">
+        </figure>
+      </div>
+    </section>
 
     <!-- Abordagem -->
     <section class="section" id="abordagem">
@@ -438,6 +598,42 @@
     </section>
 
   </div>
+
+  <!-- Lightbox JS (ADICIONADO) -->
+  <script>
+    (function () {
+      const lb = document.getElementById('lb');
+      const lbImg = document.getElementById('lbImg');
+      const lbTitle = document.getElementById('lbTitle');
+
+      function openLB(src, title) {
+        lbImg.src = src;
+        lbImg.alt = title ? ("Template ThinkBI — " + title) : "Template ThinkBI";
+        lbTitle.textContent = title || "";
+        lb.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLB() {
+        lb.setAttribute('aria-hidden', 'true');
+        lbImg.src = "";
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('.template-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          openLB(btn.dataset.full, btn.dataset.title);
+        });
+      });
+
+      lb.addEventListener('click', (e) => {
+        if (e.target.dataset.close) closeLB();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lb.getAttribute('aria-hidden') === 'false') closeLB();
+      });
+    })();
+  </script>
 </body>
 </html>
-

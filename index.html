@@ -125,16 +125,23 @@
       transition:.16s ease;
     }
 
-    .template-card:hover,.card:hover{
+    .card:hover,.template-card:hover{
       transform:translateY(-4px);
       border-color:rgba(243,168,35,.35);
     }
 
+    .card h3{display:flex;gap:10px;align-items:center;}
+    .pill{
+      width:34px;height:34px;border-radius:12px;
+      display:grid;place-items:center;
+      background:rgba(243,168,35,.16);
+    }
+
+    .card p,.template-card p{color:var(--muted);line-height:1.6;}
+
+    /* Templates */
     .template-btn{border:0;background:none;padding:0;cursor:zoom-in;}
     .template-btn img{width:100%;border-radius:14px;display:block;}
-
-    .template-card h3{margin:12px 0 6px;}
-    .template-card p{color:var(--muted);font-size:.95rem;}
 
     /* Lightbox */
     .lb{position:fixed;inset:0;display:none;z-index:9999;}
@@ -157,7 +164,6 @@
       width:34px;height:34px;cursor:pointer;
     }
 
-    /* Responsive */
     @media(max-width:920px){
       .card,.template-card{grid-column:span 12;}
       .topbar{flex-direction:column;}
@@ -174,6 +180,7 @@
     <img src="Logo - Clean v1.png" alt="ThinkBI" class="logo-top">
   </div>
   <nav class="nav">
+    <a href="#quem-somos">Quem somos</a>
     <a href="#servicos">Serviços</a>
     <a href="#templates">Templates</a>
     <a href="#beneficios">Benefícios</a>
@@ -186,15 +193,42 @@
   <h1>Empowering Insights</h1>
   <div class="tagline">Consultoria Business Intelligence &amp; Power BI</div>
   <p class="subtitle">
-    Transformamos dados em dashboards claros e acionáveis para apoiar decisões de negócio.
+    Transformamos informação dispersa em dashboards claros, interativos e personalizados —
+    para decisões baseadas em dados.
   </p>
 </header>
+
+<!-- Quem Somos -->
+<section class="section" id="quem-somos">
+  <div class="section-head">
+    <h2>Quem Somos</h2>
+    <p class="lead">
+      Consultoria especializada em Business Intelligence, focada em PMEs, com processos simples, remotos e confidenciais.
+    </p>
+  </div>
+</section>
+
+<!-- Desafio -->
+<section class="section">
+  <div class="section-head">
+    <h2>O Desafio das PMEs</h2>
+  </div>
+  <div class="grid">
+    <div class="card"><p>Informação dispersa por vários sistemas.</p></div>
+    <div class="card"><p>Dificuldade em acompanhar indicadores críticos.</p></div>
+    <div class="card"><p>Decisões sem dados consolidados e fiáveis.</p></div>
+  </div>
+</section>
 
 <!-- Serviços -->
 <section class="section" id="servicos">
   <div class="section-head">
     <h2>O que fazemos</h2>
-    <p class="lead">Soluções completas de Business Intelligence orientadas a resultados.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><h3><span class="pill">🎯</span> Análise de Custos</h3><p>Controlo e validação de margens.</p></div>
+    <div class="card"><h3><span class="pill">🧩</span> Integração de Dados</h3><p>Consolidação de múltiplas fontes.</p></div>
+    <div class="card"><h3><span class="pill">📊</span> Dashboards Power BI</h3><p>Visualização clara e acionável.</p></div>
   </div>
 </section>
 
@@ -202,21 +236,21 @@
 <section class="section" id="templates">
   <div class="section-head">
     <h2>Templates de Reports</h2>
-    <p class="lead">Exemplos demonstrativos de dashboards Power BI desenvolvidos pela ThinkBI.</p>
+    <p class="lead">Exemplos demonstrativos de dashboards Power BI.</p>
   </div>
 
   <div class="templates-grid">
     <article class="template-card">
       <button class="template-btn" data-full="assets/templates/administracao.webp" data-title="Dashboard Executivo">
-        <img src="assets/templates/administracao.webp" alt="Dashboard Executivo ThinkBI" loading="lazy">
+        <img src="assets/templates/administracao.webp" alt="Dashboard Executivo ThinkBI">
       </button>
       <h3>Dashboard Executivo</h3>
-      <p>KPIs estratégicos e visão global.</p>
+      <p>Visão global e KPIs estratégicos.</p>
     </article>
 
     <article class="template-card">
       <button class="template-btn" data-full="assets/templates/comercial.webp" data-title="Análise Comercial">
-        <img src="assets/templates/comercial.webp" alt="Análise Comercial ThinkBI" loading="lazy">
+        <img src="assets/templates/comercial.webp" alt="Análise Comercial ThinkBI">
       </button>
       <h3>Análise Comercial</h3>
       <p>Vendas, funil e clientes.</p>
@@ -224,15 +258,15 @@
 
     <article class="template-card">
       <button class="template-btn" data-full="assets/templates/controlo-financeiro.webp" data-title="Controlo Financeiro">
-        <img src="assets/templates/controlo-financeiro.webp" alt="Controlo Financeiro ThinkBI" loading="lazy">
+        <img src="assets/templates/controlo-financeiro.webp" alt="Controlo Financeiro ThinkBI">
       </button>
       <h3>Controlo Financeiro</h3>
       <p>Custos, margens e desvios.</p>
     </article>
 
     <article class="template-card">
-      <button class="template-btn" data-full="assets/templates/logistica.webp" data-title="Logística e Operações">
-        <img src="assets/templates/logistica.webp" alt="Logística ThinkBI" loading="lazy">
+      <button class="template-btn" data-full="assets/templates/logistica.webp" data-title="Logística">
+        <img src="assets/templates/logistica.webp" alt="Logística ThinkBI">
       </button>
       <h3>Logística e Operações</h3>
       <p>Envios, SLA e custos.</p>
@@ -240,7 +274,7 @@
 
     <article class="template-card">
       <button class="template-btn" data-full="assets/templates/qualidade-dados.webp" data-title="Qualidade de Dados">
-        <img src="assets/templates/qualidade-dados.webp" alt="Qualidade de Dados ThinkBI" loading="lazy">
+        <img src="assets/templates/qualidade-dados.webp" alt="Qualidade de Dados ThinkBI">
       </button>
       <h3>Qualidade de Dados</h3>
       <p>Erros, completude e validação.</p>
@@ -254,6 +288,14 @@
       <div class="lb-title" id="lbTitle"></div>
       <img class="lb-img" id="lbImg">
     </div>
+  </div>
+</section>
+
+<!-- Benefícios -->
+<section class="section" id="beneficios">
+  <div class="section-head">
+    <h2>Benefícios</h2>
+    <p class="lead">Impacto direto na operação e na gestão.</p>
   </div>
 </section>
 
@@ -274,18 +316,18 @@
 
   document.querySelectorAll('.template-btn').forEach(btn=>{
     btn.onclick=()=>{
-      lbImg.src=btn.dataset.full;
-      lbTitle.textContent=btn.dataset.title;
+      lbImg.src = btn.dataset.full;
+      lbTitle.textContent = btn.dataset.title;
       lb.setAttribute('aria-hidden','false');
     }
   });
 
-  lb.onclick=e=>{
+  lb.onclick = e => {
     if(e.target.dataset.close){
       lb.setAttribute('aria-hidden','true');
       lbImg.src='';
     }
-  }
+  };
 </script>
 
 </body>

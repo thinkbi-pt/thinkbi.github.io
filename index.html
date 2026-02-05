@@ -67,14 +67,6 @@
       filter:drop-shadow(0 6px 16px rgba(0,0,0,.18));
     }
 
-    /* Logo maior em desktop */
-    @media (min-width:921px){
-      .logo-top{
-        height:82px;
-        filter:drop-shadow(0 10px 26px rgba(0,0,0,.30));
-      }
-    }
-
     .nav{
       display:flex;
       gap:12px;
@@ -171,22 +163,6 @@
     .btn-ghost:hover{
       transform:translateY(-2px);
       background:rgba(255,255,255,.10);
-    }
-
-    /* Banner institucional */
-    .banner-impact{
-      margin-top:22px;
-      margin-bottom:44px;
-      padding:0 2px;
-    }
-
-    .banner-impact img{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius:calc(var(--radius) + 8px);
-      box-shadow:0 22px 60px rgba(0,0,0,.35);
-      border:1px solid rgba(255,255,255,.18);
     }
 
     /* Sections */
@@ -296,6 +272,180 @@
       .nav{justify-content:center;}
       .card{grid-column:span 12;}
     }
+
+    /* =========================================================
+       Templates de Reports (ADICIONADO)
+       ========================================================= */
+    .templates-grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:16px;
+      margin-top:16px;
+    }
+
+    .template-card{
+      grid-column:span 4;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:14px;
+      box-shadow:0 14px 38px rgba(0,0,0,.22);
+      backdrop-filter:blur(10px);
+      transition:.16s ease;
+      min-height:150px;
+    }
+
+    .template-card:hover{
+      transform:translateY(-4px);
+      background:rgba(255,255,255,.10);
+      border-color:rgba(243,168,35,.35);
+    }
+
+    .template-btn{
+      width:100%;
+      border:0;
+      background:transparent;
+      padding:0;
+      cursor:zoom-in;
+    }
+
+    .template-btn img{
+      width:100%;
+      height:auto;
+      border-radius:14px;
+      display:block;
+    }
+
+    .template-card h3{
+      margin:12px 0 6px;
+      font-size:1.08rem;
+      font-weight:800;
+    }
+
+    .template-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    /* Lightbox */
+    .lb{position:fixed;inset:0;display:none;z-index:9999;}
+    .lb[aria-hidden="false"]{display:block;}
+    .lb-backdrop{position:absolute;inset:0;background:rgba(2,6,23,.65);}
+    .lb-content{
+      position:relative;
+      max-width:min(1100px, calc(100vw - 32px));
+      max-height:calc(100vh - 32px);
+      margin:16px auto;
+      background:#fff;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 24px 60px rgba(0,0,0,.35);
+    }
+    .lb-title{
+      padding:12px 14px;
+      font-weight:800;
+      color:#0b2a5b;
+      border-bottom:1px solid #eef2f7;
+    }
+    .lb-img{width:100%;height:auto;display:block;}
+    .lb-close{
+      position:absolute;right:10px;top:6px;
+      width:36px;height:36px;
+      border-radius:10px;
+      border:1px solid #e5e7eb;
+      background:#fff;
+      cursor:pointer;
+      font-size:22px;
+      line-height:1;
+    }
+
+    /* Responsive templates */
+    @media (max-width:920px){
+      .template-card{grid-column:span 12;}
+    }
+    @media (min-width:921px) and (max-width:1100px){
+      .template-card{grid-column:span 6;}
+    }
+
+    /* =========================================================
+       LEGAL (ADICIONADO - minimalista/discreto)
+       ========================================================= */
+    .legal{
+      margin-top:14px;
+      color:rgba(255,255,255,.55);
+      font-size:.86rem;
+      line-height:1.55;
+    }
+    .legal a{
+      color:rgba(255,255,255,.70);
+      font-weight:700;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+    .legal a:hover{color:var(--text);}
+
+    .modal{
+      position:fixed; inset:0;
+      display:none;
+      z-index:10000;
+    }
+    .modal[aria-hidden="false"]{display:block;}
+    .modal-backdrop{
+      position:absolute; inset:0;
+      background:rgba(2,6,23,.65);
+    }
+    .modal-panel{
+      position:relative;
+      width:min(860px, calc(100vw - 28px));
+      margin:18px auto;
+      max-height:calc(100vh - 36px);
+      overflow:auto;
+      background:rgba(255,255,255,.98);
+      color:#0b1226;
+      border-radius:16px;
+      box-shadow:0 24px 60px rgba(0,0,0,.35);
+      padding:18px 18px 16px;
+    }
+    .modal-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+      padding-bottom:10px;
+      border-bottom:1px solid #eef2f7;
+      margin-bottom:12px;
+    }
+    .modal-title{
+      font-family:'Montserrat','Inter',Arial,sans-serif;
+      font-weight:800;
+      font-size:1.15rem;
+      letter-spacing:-.01em;
+      margin:0;
+    }
+    .modal-close{
+      width:38px;height:38px;
+      border-radius:12px;
+      border:1px solid #e5e7eb;
+      background:#fff;
+      cursor:pointer;
+      font-size:22px;
+      line-height:1;
+      flex:0 0 auto;
+    }
+    .modal-body{
+      font-size:.95rem;
+      line-height:1.65;
+      color:#111827;
+    }
+    .modal-body h4{
+      margin:14px 0 6px;
+      font-size:1.02rem;
+      font-weight:900;
+      color:#0b2a5b;
+    }
+    .modal-body p{margin:0 0 10px;}
+    .modal-body ul{margin:0 0 10px 18px;}
   </style>
 </head>
 
@@ -331,13 +481,6 @@
         <a class="btn btn-ghost" href="#servicos">📊 Ver serviços</a>
       </div>
     </header>
-
-    <!-- Banner -->
-    <section class="banner-impact">
-      <img src="Banner%20Linkedin%20direita.png"
-           alt="ThinkBI — Dados claros. Decisões inteligentes."
-           loading="eager">
-    </section>
 
     <!-- Quem Somos -->
     <section class="section" id="quem-somos">
@@ -378,36 +521,139 @@
 
       <div class="grid">
 
+        <!-- 1 -->
         <div class="card">
           <h3><span class="pill">🎯</span> Análise de Custos</h3>
           <p>Validação de faturação, controlo de margens e análise de custos com visão global do negócio.</p>
         </div>
 
+        <!-- 2 -->
         <div class="card">
           <h3><span class="pill">🧩</span> Integração &amp; Normalização de Dados</h3>
           <p>Consolidação de dados de várias fontes com normalização e regras de negócio bem definidas, garantindo consistência e fiabilidade.</p>
         </div>
 
+        <!-- 3 -->
         <div class="card">
           <h3><span class="pill">⚙️</span> ETL &amp; Modelação de Dados</h3>
           <p>Processos ETL robustos e escaláveis, alinhados com boas práticas, para criar uma base sólida para análise e crescimento.</p>
         </div>
 
+        <!-- 4 -->
         <div class="card">
           <h3><span class="pill">📐</span> Definição de KPIs &amp; Métricas</h3>
           <p>Tradução de objetivos de negócio em indicadores claros, consistentes e alinhados com a estratégia da organização.</p>
         </div>
 
+        <!-- 5 -->
         <div class="card">
           <h3><span class="pill">📊</span> Dashboards Power BI</h3>
           <p>Indicadores de gestão claros e consistentes para vendas, logística, stocks e direção, com governação e definição de métricas.</p>
         </div>
 
+        <!-- 6 -->
         <div class="card">
           <h3><span class="pill">🖥️</span> Suporte Técnico &amp; Infraestrutura</h3>
           <p>Apoio na definição de infraestrutura, equipamentos, software e serviços associados ao desenvolvimento e operação das soluções BI.</p>
         </div>
 
+      </div>
+    </section>
+
+    <!-- Templates de Reports (ADICIONADO) -->
+    <section class="section" id="templates">
+      <div class="section-head">
+        <h2>Templates de Reports</h2>
+        <p class="lead">
+          Exemplos demonstrativos de dashboards Power BI (dados ilustrativos) — clique para ampliar.
+        </p>
+      </div>
+
+      <div class="templates-grid">
+
+        <article class="template-card">
+          <button class="template-btn" data-full="assets/templates/administracao.webp" data-title="Dashboard Executivo">
+            <img src="assets/templates/administracao.webp" alt="Template ThinkBI — Dashboard Executivo" loading="lazy">
+          </button>
+          <h3>Dashboard Executivo</h3>
+          <p>KPIs de gestão, evolução, performance por região/segmento.</p>
+        </article>
+
+        <article class="template-card">
+          <button class="template-btn" data-full="assets/templates/comercial.webp" data-title="Análise Comercial e Vendas">
+            <img src="assets/templates/comercial.webp" alt="Template ThinkBI — Análise Comercial e Vendas" loading="lazy">
+          </button>
+          <h3>Análise Comercial e Vendas</h3>
+          <p>Vendas, funil, produto, top clientes e mapa por região.</p>
+        </article>
+
+        <article class="template-card">
+          <button class="template-btn" data-full="assets/templates/controlo-financeiro.webp" data-title="Controlo Financeiro e Margens">
+            <img src="assets/templates/controlo-financeiro.webp" alt="Template ThinkBI — Controlo Financeiro e Margens" loading="lazy">
+          </button>
+          <h3>Controlo Financeiro e Margens</h3>
+          <p>Receitas vs custos, margem líquida, desvios e análise mensal.</p>
+        </article>
+
+        <article class="template-card">
+          <button class="template-btn" data-full="assets/templates/logistica.webp" data-title="Logística e Operações">
+            <img src="assets/templates/logistica.webp" alt="Template ThinkBI — Logística e Operações" loading="lazy">
+          </button>
+          <h3>Logística e Operações</h3>
+          <p>Envios, custo médio por envio, SLA e taxa de atrasos.</p>
+        </article>
+
+        <article class="template-card">
+          <button class="template-btn" data-full="assets/templates/rh.webp" data-title="Recursos Humanos">
+            <img src="assets/templates/rh.webp" alt="Template ThinkBI — Recursos Humanos" loading="lazy">
+          </button>
+          <h3>Recursos Humanos</h3>
+          <p>Colaboradores, turnover, absentismo, desempenho e custos por departamento.</p>
+        </article>
+
+        <article class="template-card">
+          <button class="template-btn" data-full="assets/templates/qualidade-dados.webp" data-title="Qualidade de Dados">
+            <img src="assets/templates/qualidade-dados.webp" alt="Template ThinkBI — Qualidade de Dados" loading="lazy">
+          </button>
+          <h3>Qualidade de Dados</h3>
+          <p>Completude, erros, origem e histórico de validação.</p>
+        </article>
+
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lb" id="lb" aria-hidden="true">
+        <div class="lb-backdrop" data-close="1"></div>
+        <figure class="lb-content" role="dialog" aria-modal="true" aria-label="Pré-visualização do template">
+          <button class="lb-close" type="button" aria-label="Fechar" data-close="1">×</button>
+          <figcaption class="lb-title" id="lbTitle"></figcaption>
+          <img class="lb-img" id="lbImg" alt="">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Abordagem -->
+    <section class="section" id="abordagem">
+      <div class="section-head">
+        <h2>A Nossa Abordagem</h2>
+        <p class="lead">Processo simples (e repetível) para chegar a dashboards que a equipa usa.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3><span class="pill">1</span> Análise</h3>
+          <p>Compreensão do negócio e dos indicadores que importam (perguntas certas → Indicadores certos).</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="pill">2</span> Modelação</h3>
+          <p>Estruturação, limpeza e transformação de dados para confiança e consistência.</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="pill">3</span> Visualização</h3>
+          <p>Dashboards claros, interativos e orientados para resultados — com foco na adoção.</p>
+        </div>
       </div>
     </section>
 
@@ -435,9 +681,109 @@
         ✉️ <a href="mailto:geral@thinkbi.pt">geral@thinkbi.pt</a>
       </div>
 
+      <!-- (ADICIONADO) link discreto para o modal Legal -->
+      <div class="legal">
+        <a href="#" data-open-legal="1">Legal</a>
+      </div>
+
       <div class="footer">© ThinkBI — Consultoria BI</div>
     </section>
 
   </div>
+
+  <!-- (ADICIONADO) Modal Legal / Privacidade / Cookies (texto minimalista) -->
+  <div class="modal" id="legalModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-legal="1"></div>
+
+    <section class="modal-panel" role="dialog" aria-modal="true" aria-label="Informação Legal">
+      <div class="modal-head">
+        <h3 class="modal-title">Informação Legal</h3>
+        <button class="modal-close" type="button" aria-label="Fechar" data-close-legal="1">×</button>
+      </div>
+
+      <div class="modal-body">
+        <h4>Informação Legal</h4>
+        <p><strong>ThinkBI</strong> é uma marca comercial utilizada no âmbito de atividade profissional independente em Portugal.</p>
+        <p><strong>Contacto:</strong> <a href="mailto:geral@thinkbi.pt">geral@thinkbi.pt</a></p>
+
+        <h4>Privacidade</h4>
+        <p>Os dados pessoais eventualmente enviados por email são utilizados exclusivamente para responder a pedidos de contacto profissional.</p>
+        <p>A base legal para o tratamento é o interesse legítimo.</p>
+        <p>O responsável pelo tratamento de dados é o titular do site, contactável através do endereço de email indicado.</p>
+
+        <h4>Cookies</h4>
+        <p>Este site não utiliza cookies de marketing ou de rastreio.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Lightbox JS (ADICIONADO) -->
+  <script>
+    (function () {
+      const lb = document.getElementById('lb');
+      const lbImg = document.getElementById('lbImg');
+      const lbTitle = document.getElementById('lbTitle');
+
+      function openLB(src, title) {
+        lbImg.src = src;
+        lbImg.alt = title ? ("Template ThinkBI — " + title) : "Template ThinkBI";
+        lbTitle.textContent = title || "";
+        lb.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLB() {
+        lb.setAttribute('aria-hidden', 'true');
+        lbImg.src = "";
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('.template-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          openLB(btn.dataset.full, btn.dataset.title);
+        });
+      });
+
+      lb.addEventListener('click', (e) => {
+        if (e.target.dataset.close) closeLB();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lb.getAttribute('aria-hidden') === 'false') closeLB();
+      });
+    })();
+  </script>
+
+  <!-- (ADICIONADO) Modal Legal JS -->
+  <script>
+    (function () {
+      const modal = document.getElementById('legalModal');
+
+      function openLegal() {
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLegal() {
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('[data-open-legal]').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          openLegal();
+        });
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target.dataset.closeLegal) closeLegal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeLegal();
+      });
+    })();
+  </script>
 </body>
 </html>

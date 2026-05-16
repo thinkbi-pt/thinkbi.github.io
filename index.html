@@ -4,10 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>ThinkBI - Consultoria BI, Power BI, SQL & IA</title>
-  <meta name="description" content="A ThinkBI ajuda empresas a transformar dados dispersos entre ERP, Excel, SQL e Power BI em dashboards claros, automatizados e preparados para Inteligência Artificial." />
+  <title>ThinkBI - Power BI, SQL, ETL & IA</title>
+  <meta name="description" content="A ThinkBI ajuda empresas a transformar dados dispersos entre ERP, Excel, SQL Server e outras plataformas em dashboards claros, automatizados e preparados para Inteligência Artificial." />
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WX3JMPTLQ4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -16,177 +15,172 @@
     gtag('config', 'G-WX3JMPTLQ4');
   </script>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg-base:#1E3A8A;
-      --bg-elev:#1E40AF;
-      --surface:rgba(255,255,255,.08);
-      --surface-2:rgba(255,255,255,.06);
-      --border:rgba(255,255,255,.14);
-      --text:rgba(255,255,255,.93);
-      --muted:rgba(255,255,255,.72);
-      --brand:#F3A823;
-      --accent:#38BDF8;
-      --shadow:0 18px 55px rgba(0,0,0,.28);
-      --radius:18px;
-      --max:1120px;
+      --navy:#061B3A;
+      --blue:#1F6FE5;
+      --blue-2:#1FA3FF;
+      --orange:#F3A823;
+      --text:#071833;
+      --muted:#526174;
+      --soft:#F5F8FD;
+      --soft-2:#EAF2FF;
+      --border:#DDE8F7;
+      --card:#FFFFFF;
+      --shadow:0 18px 50px rgba(6,27,58,.10);
+      --shadow-soft:0 10px 28px rgba(6,27,58,.08);
+      --radius:22px;
+      --max:1180px;
     }
 
-    *{margin:0;padding:0;box-sizing:border-box;}
+    *{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
     body{
       font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text);
       background:
-        radial-gradient(1200px 650px at 12% 8%, rgba(243,168,35,.18), transparent 60%),
-        radial-gradient(900px 520px at 85% 22%, rgba(56,189,248,.18), transparent 55%),
-        linear-gradient(135deg,var(--bg-base),var(--bg-elev));
-      min-height:100vh;
+        radial-gradient(900px 420px at 88% 10%, rgba(31,111,229,.13), transparent 65%),
+        radial-gradient(700px 350px at 8% 18%, rgba(31,163,255,.10), transparent 60%),
+        linear-gradient(180deg,#ffffff 0%,#f6f9fe 46%,#ffffff 100%);
       overflow-x:hidden;
     }
 
-    a{color:inherit;text-decoration:none;}
-    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 80px;}
+    a{text-decoration:none;color:inherit;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 22px;}
 
     .topbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.86);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(221,232,247,.75);
+    }
+
+    .topbar-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 22px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:20px;
-      padding:22px 0 34px;
+      gap:26px;
     }
 
-    .brandline{
+    .brand{
       display:flex;
       align-items:center;
-      min-width:240px;
+      gap:12px;
+      min-width:190px;
     }
 
-    .logo-top{
-      height:56px;
-      width:auto;
-      display:block;
-      filter:drop-shadow(0 6px 16px rgba(0,0,0,.18));
+    .brand-mark{
+      width:46px;
+      height:46px;
+      border-radius:15px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--blue),var(--blue-2));
+      color:#fff;
+      box-shadow:0 12px 30px rgba(31,111,229,.22);
+      font-weight:900;
+      font-size:1.35rem;
     }
 
-    @media (min-width:921px){
-      .logo-top{
-        height:82px;
-        filter:drop-shadow(0 10px 26px rgba(0,0,0,.30));
-      }
+    .brand-text{
+      line-height:1;
+      font-family:'Montserrat','Inter',Arial,sans-serif;
+      font-weight:900;
+      letter-spacing:-.04em;
+      font-size:1.78rem;
+      color:var(--navy);
+      white-space:nowrap;
     }
+
+    .brand-text span{color:var(--blue);}
+    .brand-sub{font-size:.62rem;letter-spacing:.26em;color:var(--muted);font-weight:800;margin-top:5px;}
 
     .nav{
       display:flex;
-      gap:12px;
-      flex-wrap:wrap;
+      align-items:center;
       justify-content:flex-end;
+      gap:6px;
+      flex-wrap:wrap;
     }
 
     .nav a{
-      font-weight:600;
-      font-size:.95rem;
-      color:var(--muted);
       padding:10px 12px;
+      color:#1a2d49;
+      font-weight:700;
+      font-size:.94rem;
       border-radius:12px;
-      transition:.18s ease;
+      transition:.16s ease;
     }
 
-    .nav a:hover{
-      color:var(--text);
-      background:rgba(255,255,255,.07);
-    }
+    .nav a:hover{background:var(--soft-2);color:var(--blue);}
 
     .nav a.nav-cta{
-      background:linear-gradient(45deg,var(--brand),#f59e0b);
-      color:#0b1226;
-      font-weight:800;
-      box-shadow:0 10px 28px rgba(243,168,35,.22);
-    }
-
-    .nav a.nav-cta:hover{
-      color:#0b1226;
-      transform:translateY(-2px);
-      box-shadow:0 14px 36px rgba(243,168,35,.30);
+      margin-left:4px;
+      background:linear-gradient(135deg,var(--navy),#083b7c);
+      color:#fff;
+      padding:12px 16px;
+      box-shadow:0 12px 28px rgba(6,27,58,.18);
     }
 
     .hero{
-      border-radius:calc(var(--radius) + 8px);
-      background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.06));
-      border:1px solid rgba(255,255,255,.16);
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(12px);
-      padding:68px 22px;
-      text-align:center;
+      padding:78px 0 54px;
+      position:relative;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:44px;
+      align-items:center;
     }
 
     .eyebrow{
       display:inline-flex;
       align-items:center;
       gap:8px;
-      padding:8px 14px;
+      background:#fff;
+      border:1px solid var(--border);
+      color:var(--blue);
+      padding:8px 13px;
       border-radius:999px;
-      background:rgba(243,168,35,.16);
-      border:1px solid rgba(243,168,35,.30);
-      color:var(--brand);
-      font-weight:800;
-      margin-bottom:18px;
-      font-size:.95rem;
+      font-weight:900;
+      font-size:.92rem;
+      box-shadow:var(--shadow-soft);
+      margin-bottom:20px;
     }
 
     h1{
       font-family:'Montserrat','Inter',Arial,sans-serif;
-      font-weight:800;
-      letter-spacing:-0.02em;
-      font-size:clamp(2.15rem,4vw,3.35rem);
-      margin-bottom:14px;
-      margin-top:6px;
+      font-size:clamp(2.55rem,5vw,4.7rem);
+      line-height:1.03;
+      letter-spacing:-.06em;
+      color:var(--navy);
+      margin-bottom:22px;
     }
 
-    .tagline{
-      color:var(--brand);
-      font-weight:800;
-      font-size:1.08rem;
-      margin-bottom:16px;
-    }
+    h1 span{color:var(--blue);}
 
-    .subtitle{
-      max-width:860px;
-      margin:0 auto;
+    .hero p{
       color:var(--muted);
-      font-size:1.06rem;
-      line-height:1.72;
+      max-width:680px;
+      font-size:1.1rem;
+      line-height:1.75;
     }
 
-    .tech-pills{
+    .hero-actions{
       display:flex;
-      justify-content:center;
+      gap:14px;
       flex-wrap:wrap;
-      gap:10px;
-      margin-top:22px;
-    }
-
-    .tech-pill{
-      padding:9px 12px;
-      border-radius:999px;
-      background:rgba(255,255,255,.07);
-      border:1px solid rgba(255,255,255,.14);
-      color:rgba(255,255,255,.86);
-      font-weight:700;
-      font-size:.92rem;
-    }
-
-    .cta-row{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      justify-content:center;
-      margin-top:26px;
+      margin-top:30px;
     }
 
     .btn{
@@ -194,342 +188,187 @@
       align-items:center;
       justify-content:center;
       gap:10px;
-      padding:14px 18px;
-      border-radius:999px;
-      font-weight:800;
+      border-radius:14px;
+      padding:15px 20px;
+      font-weight:900;
       transition:.18s ease;
-      user-select:none;
+      border:1px solid transparent;
     }
 
     .btn-primary{
-      background:linear-gradient(45deg,var(--brand),#f59e0b);
-      color:#0b1226;
-      box-shadow:0 16px 40px rgba(243,168,35,.25);
+      background:linear-gradient(135deg,var(--navy),#093f83);
+      color:#fff;
+      box-shadow:0 15px 34px rgba(6,27,58,.18);
     }
 
-    .btn-primary:hover{
-      transform:translateY(-2px);
-      box-shadow:0 20px 52px rgba(243,168,35,.32);
+    .btn-primary:hover,.btn-secondary:hover{transform:translateY(-2px);}
+
+    .btn-secondary{
+      background:#fff;
+      color:var(--navy);
+      border-color:#bcd1ee;
+      box-shadow:var(--shadow-soft);
     }
 
-    .btn-ghost{
-      background:rgba(255,255,255,.07);
-      border:1px solid rgba(255,255,255,.16);
-      color:var(--text);
+    .hero-visual{
+      background:
+        radial-gradient(400px 230px at 70% 20%, rgba(31,111,229,.18), transparent 60%),
+        linear-gradient(145deg,#ffffff,#edf5ff);
+      border:1px solid var(--border);
+      border-radius:32px;
+      padding:26px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
     }
 
-    .btn-ghost:hover{
-      transform:translateY(-2px);
-      background:rgba(255,255,255,.10);
+    .laptop{
+      background:#091B35;
+      border-radius:24px;
+      padding:14px 14px 20px;
+      box-shadow:0 24px 60px rgba(6,27,58,.23);
+      transform:rotate(1deg);
     }
 
-    .section{margin-top:44px;padding:0 2px;}
-    .section-head{text-align:center;margin-bottom:18px;}
-
-    h2{
-      font-family:'Montserrat','Inter',Arial,sans-serif;
-      font-weight:800;
-      letter-spacing:-0.015em;
-      font-size:clamp(1.6rem,2.6vw,2.1rem);
-      margin-bottom:10px;
+    .screen{
+      background:#f7fbff;
+      border-radius:15px;
+      padding:18px;
+      min-height:330px;
+      display:grid;
+      gap:12px;
     }
 
-    .lead{
-      color:var(--muted);
-      max-width:900px;
-      margin:0 auto;
-      line-height:1.7;
-      font-size:1.02rem;
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+    .kpi{background:#fff;border:1px solid #e6eef9;border-radius:13px;padding:12px;}
+    .kpi small{display:block;color:var(--muted);font-weight:800;font-size:.65rem;margin-bottom:6px;}
+    .kpi strong{font-size:1.05rem;color:var(--navy);}
+    .kpi span{display:block;color:#10a66a;font-size:.72rem;font-weight:800;margin-top:4px;}
+
+    .chart-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;}
+    .chart-card{background:#fff;border:1px solid #e6eef9;border-radius:15px;padding:14px;min-height:150px;}
+    .bars{display:flex;align-items:end;gap:8px;height:120px;padding-top:20px;}
+    .bar{flex:1;border-radius:8px 8px 2px 2px;background:linear-gradient(180deg,var(--blue-2),var(--blue));}
+    .donut{width:120px;height:120px;border-radius:50%;background:conic-gradient(var(--blue) 0 62%,#dbeafe 62% 100%);display:grid;place-items:center;margin:8px auto;}
+    .donut span{width:70px;height:70px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:900;color:var(--navy);}
+
+    .trust-row{
+      margin-top:26px;
+      background:linear-gradient(135deg,var(--navy),#063B7E);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      color:#fff;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1px;
+      overflow:hidden;
     }
 
-    .grid{
+    .trust-item{
+      padding:24px 20px;
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      background:rgba(255,255,255,.03);
+    }
+
+    .trust-icon{font-size:1.8rem;color:var(--blue-2);}
+    .trust-item h3{font-size:1rem;margin-bottom:5px;}
+    .trust-item p{font-size:.9rem;color:rgba(255,255,255,.76);line-height:1.45;}
+
+    section{padding:62px 0;}
+    .section-head{text-align:center;max-width:840px;margin:0 auto 32px;}
+    .section-kicker{color:var(--blue);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:900;margin-bottom:10px;}
+    h2{font-family:'Montserrat','Inter',Arial,sans-serif;font-size:clamp(1.8rem,3vw,2.65rem);letter-spacing:-.045em;line-height:1.12;color:var(--navy);margin-bottom:13px;}
+    .lead{color:var(--muted);line-height:1.7;font-size:1.03rem;}
+
+    .cards{
       display:grid;
       grid-template-columns:repeat(12,1fr);
-      gap:16px;
-      margin-top:16px;
+      gap:18px;
     }
 
     .card{
       grid-column:span 4;
-      background:var(--surface);
+      background:var(--card);
       border:1px solid var(--border);
       border-radius:var(--radius);
-      padding:20px 18px;
-      box-shadow:0 14px 38px rgba(0,0,0,.22);
-      backdrop-filter:blur(10px);
-      transition:.16s ease;
-      min-height:150px;
+      padding:24px;
+      box-shadow:var(--shadow-soft);
+      transition:.18s ease;
     }
 
-    .card:hover{
-      transform:translateY(-4px);
-      background:rgba(255,255,255,.10);
-      border-color:rgba(243,168,35,.35);
+    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+    .card-icon{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;background:linear-gradient(135deg,#eef6ff,#ffffff);border:1px solid var(--border);font-size:1.65rem;margin-bottom:16px;}
+    .card h3{color:var(--navy);font-size:1.12rem;margin-bottom:10px;}
+    .card p{color:var(--muted);line-height:1.65;font-size:.96rem;}
+
+    .light-section{
+      background:linear-gradient(180deg,#f7fbff,#ffffff);
+      border-top:1px solid #eaf1fb;
+      border-bottom:1px solid #eaf1fb;
     }
 
-    .card h3{
-      display:flex;
+    .story-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr .75fr;
+      gap:26px;
       align-items:center;
-      gap:10px;
-      font-size:1.08rem;
-      margin-bottom:10px;
-      font-weight:800;
     }
 
-    .pill{
-      width:34px;
-      height:34px;
-      display:grid;
-      place-items:center;
-      border-radius:12px;
-      background:rgba(243,168,35,.16);
-      border:1px solid rgba(243,168,35,.22);
-      flex:0 0 auto;
+    .story-title{
+      color:var(--navy);
+      font-family:'Montserrat','Inter',Arial,sans-serif;
+      font-size:clamp(1.8rem,3vw,2.45rem);
+      letter-spacing:-.045em;
+      line-height:1.15;
+      font-weight:900;
     }
 
-    .card p{color:var(--muted);line-height:1.65;}
-
-    .list{
-      max-width:920px;
-      margin:16px auto 0;
-      padding:18px;
-      background:var(--surface-2);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:var(--radius);
-      box-shadow:0 14px 40px rgba(0,0,0,.20);
-    }
-
-    .list ul{list-style:none;display:grid;gap:10px;padding:0;margin:0;}
-    .list li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);line-height:1.6;}
-    .dot{color:var(--accent);font-weight:900;margin-top:2px;}
-
-    .story{
-      background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.055));
-      border:1px solid rgba(255,255,255,.14);
-      border-radius:calc(var(--radius) + 8px);
-      box-shadow:var(--shadow);
-      padding:28px 22px;
-      margin-top:18px;
-    }
-
-    .story p{
-      color:var(--muted);
-      line-height:1.75;
-      max-width:930px;
-      margin:0 auto 12px;
-      text-align:center;
-    }
-
-    .milestones{
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:12px;
-      margin-top:18px;
-    }
-
-    .milestone{
-      grid-column:span 4;
-      padding:14px 14px;
-      border-radius:16px;
-      background:rgba(255,255,255,.07);
-      border:1px solid rgba(255,255,255,.13);
-      color:rgba(255,255,255,.86);
-      font-weight:700;
-      text-align:center;
-    }
-
-    .banner-impact{
-      margin:40px 0 60px;
-      padding:16px;
-      background:linear-gradient(
-        180deg,
-        rgba(30,58,138,.85),
-        rgba(30,64,175,.85)
-      );
-      border-radius:calc(var(--radius) + 8px);
-    }
-
-    .banner-impact img{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius:calc(var(--radius) + 8px);
-    }
+    .story-text p{color:var(--muted);line-height:1.75;margin-bottom:12px;}
+    .story-text strong{color:var(--navy);}
+    .badge-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-soft);}
+    .badge-card .big{font-size:2rem;margin-bottom:12px;}
+    .badge-card h3{color:var(--navy);margin-bottom:8px;}
+    .badge-card p{color:var(--muted);line-height:1.6;}
 
     .templates-grid{
       display:grid;
       grid-template-columns:repeat(12,1fr);
-      gap:16px;
-      margin-top:16px;
+      gap:18px;
     }
 
     .template-card{
       grid-column:span 4;
-      background:var(--surface);
+      background:#fff;
       border:1px solid var(--border);
       border-radius:var(--radius);
       padding:14px;
-      box-shadow:0 14px 38px rgba(0,0,0,.22);
-      backdrop-filter:blur(10px);
-      transition:.16s ease;
-      min-height:150px;
+      box-shadow:var(--shadow-soft);
     }
 
-    .template-card:hover{
-      transform:translateY(-4px);
-      background:rgba(255,255,255,.10);
-      border-color:rgba(243,168,35,.35);
-    }
+    .template-btn{width:100%;border:0;background:transparent;cursor:zoom-in;padding:0;}
+    .template-btn img{width:100%;display:block;border-radius:16px;}
+    .template-card h3{margin:14px 4px 6px;color:var(--navy);}
+    .template-card p{margin:0 4px 8px;color:var(--muted);line-height:1.55;}
 
-    .template-btn{
-      width:100%;
-      border:0;
-      background:transparent;
-      padding:0;
-      cursor:zoom-in;
-    }
-
-    .template-btn img{
-      width:100%;
-      height:auto;
-      border-radius:14px;
-      display:block;
-    }
-
-    .template-card h3{
-      margin:12px 0 6px;
-      font-size:1.08rem;
-      font-weight:800;
-    }
-
-    .template-card p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.65;
-    }
-
-    .contact{
-      margin-top:40px;
-      padding:30px 18px;
+    .contact-box{
+      background:linear-gradient(135deg,var(--navy),#063B7E);
+      border-radius:30px;
+      padding:44px 26px;
       text-align:center;
-      background:rgba(0,0,0,.22);
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:calc(var(--radius) + 8px);
+      color:#fff;
       box-shadow:var(--shadow);
     }
+    .contact-box h2{color:#fff;}
+    .contact-box .lead{color:rgba(255,255,255,.78);}
+    .contact-box .btn-secondary{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.22);}
+    .mail{margin-top:18px;color:rgba(255,255,255,.85);font-weight:800;}
+    .mail a{color:var(--orange);}
+    .footer{margin-top:18px;color:rgba(255,255,255,.58);font-size:.9rem;}
 
-    .mail{margin-top:14px;font-size:1.06rem;}
-    .mail a{color:var(--brand);font-weight:900;}
-    .mail a:hover{text-decoration:underline;}
-    .footer{margin-top:16px;color:rgba(255,255,255,.55);font-size:.9rem;}
-
-    .lb{position:fixed;inset:0;display:none;z-index:9999;}
-    .lb[aria-hidden="false"]{display:block;}
-    .lb-backdrop{position:absolute;inset:0;background:rgba(2,6,23,.65);}
-    .lb-content{
-      position:relative;
-      max-width:min(1100px, calc(100vw - 32px));
-      max-height:calc(100vh - 32px);
-      margin:16px auto;
-      background:#fff;
-      border-radius:16px;
-      overflow:hidden;
-      box-shadow:0 24px 60px rgba(0,0,0,.35);
-    }
-    .lb-title{
-      padding:12px 14px;
-      font-weight:800;
-      color:#0b2a5b;
-      border-bottom:1px solid #eef2f7;
-    }
-    .lb-img{width:100%;height:auto;display:block;}
-    .lb-close{
-      position:absolute;right:10px;top:6px;
-      width:36px;height:36px;
-      border-radius:10px;
-      border:1px solid #e5e7eb;
-      background:#fff;
-      cursor:pointer;
-      font-size:22px;
-      line-height:1;
-    }
-
-    .legal{
-      margin-top:14px;
-      color:rgba(255,255,255,.55);
-      font-size:.86rem;
-      line-height:1.55;
-    }
-    .legal a{
-      color:rgba(255,255,255,.70);
-      font-weight:700;
-      text-decoration:underline;
-      text-underline-offset:3px;
-    }
-    .legal a:hover{color:var(--text);}
-
-    .modal{
-      position:fixed; inset:0;
-      display:none;
-      z-index:10000;
-    }
-    .modal[aria-hidden="false"]{display:block;}
-    .modal-backdrop{
-      position:absolute; inset:0;
-      background:rgba(2,6,23,.65);
-    }
-    .modal-panel{
-      position:relative;
-      width:min(860px, calc(100vw - 28px));
-      margin:18px auto;
-      max-height:calc(100vh - 36px);
-      overflow:auto;
-      background:rgba(255,255,255,.98);
-      color:#0b1226;
-      border-radius:16px;
-      box-shadow:0 24px 60px rgba(0,0,0,.35);
-      padding:18px 18px 16px;
-    }
-    .modal-head{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:14px;
-      padding-bottom:10px;
-      border-bottom:1px solid #eef2f7;
-      margin-bottom:12px;
-    }
-    .modal-title{
-      font-family:'Montserrat','Inter',Arial,sans-serif;
-      font-weight:800;
-      font-size:1.15rem;
-      letter-spacing:-.01em;
-      margin:0;
-    }
-    .modal-close{
-      width:38px;height:38px;
-      border-radius:12px;
-      border:1px solid #e5e7eb;
-      background:#fff;
-      cursor:pointer;
-      font-size:22px;
-      line-height:1;
-      flex:0 0 auto;
-    }
-    .modal-body{
-      font-size:.95rem;
-      line-height:1.65;
-      color:#111827;
-    }
-    .modal-body h4{
-      margin:14px 0 6px;
-      font-size:1.02rem;
-      font-weight:900;
-      color:#0b2a5b;
-    }
-    .modal-body p{margin:0 0 10px;}
-    .modal-body ul{margin:0 0 10px 18px;}
-
+    .legal{margin-top:16px;font-size:.86rem;}
+    .legal a{color:rgba(255,255,255,.7);text-decoration:underline;text-underline-offset:3px;}
 
     .whatsapp-float{
       position:fixed;
@@ -543,413 +382,339 @@
       place-items:center;
       background:#25D366;
       color:#fff;
-      box-shadow:0 16px 40px rgba(0,0,0,.30);
-      border:1px solid rgba(255,255,255,.35);
+      box-shadow:0 16px 40px rgba(0,0,0,.22);
+      border:1px solid rgba(255,255,255,.8);
       transition:.18s ease;
       font-size:1.55rem;
     }
 
-    .whatsapp-float:hover{
-      transform:translateY(-3px) scale(1.03);
-      box-shadow:0 20px 52px rgba(0,0,0,.36);
-    }
+    .whatsapp-float:hover{transform:translateY(-3px) scale(1.03);}
 
-    @media (max-width:920px){
-      .topbar{flex-direction:column;align-items:center;}
-      .brandline{justify-content:center;min-width:auto;}
-      .logo-top{height:44px;}
+    .lb{position:fixed;inset:0;display:none;z-index:9999;}
+    .lb[aria-hidden="false"]{display:block;}
+    .lb-backdrop{position:absolute;inset:0;background:rgba(6,27,58,.72);}
+    .lb-content{position:relative;max-width:min(1100px, calc(100vw - 32px));max-height:calc(100vh - 32px);margin:16px auto;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);}
+    .lb-title{padding:13px 15px;font-weight:900;color:var(--navy);border-bottom:1px solid #eef2f7;}
+    .lb-img{width:100%;height:auto;display:block;}
+    .lb-close{position:absolute;right:10px;top:7px;width:36px;height:36px;border-radius:10px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:22px;line-height:1;}
+
+    .modal{position:fixed;inset:0;display:none;z-index:10000;}
+    .modal[aria-hidden="false"]{display:block;}
+    .modal-backdrop{position:absolute;inset:0;background:rgba(6,27,58,.72);}
+    .modal-panel{position:relative;width:min(860px, calc(100vw - 28px));margin:18px auto;max-height:calc(100vh - 36px);overflow:auto;background:#fff;color:#111827;border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.35);padding:20px;}
+    .modal-head{display:flex;justify-content:space-between;gap:14px;padding-bottom:10px;border-bottom:1px solid #eef2f7;margin-bottom:12px;}
+    .modal-title{font-family:'Montserrat','Inter',Arial,sans-serif;font-weight:900;color:var(--navy);}
+    .modal-close{width:38px;height:38px;border-radius:12px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:22px;}
+    .modal-body{line-height:1.65;color:#111827;}
+    .modal-body h4{margin:14px 0 6px;color:var(--navy);}
+
+    @media (max-width:980px){
+      .topbar-inner{flex-direction:column;}
       .nav{justify-content:center;}
-      .card{grid-column:span 12;}
-      .template-card{grid-column:span 12;}
-      .milestone{grid-column:span 12;}
-      .hero{padding:48px 18px;}
+      .hero-grid{grid-template-columns:1fr;}
+      .hero-visual{order:-1;}
+      .trust-row{grid-template-columns:1fr 1fr;}
+      .story-grid{grid-template-columns:1fr;}
+      .card{grid-column:span 6;}
+      .template-card{grid-column:span 6;}
     }
 
-    @media (min-width:921px) and (max-width:1100px){
-      .template-card{grid-column:span 6;}
-      .milestone{grid-column:span 6;}
+    @media (max-width:640px){
+      .wrap{padding:0 16px;}
+      .topbar-inner{padding:14px 16px;}
+      .brand-mark{width:40px;height:40px;}
+      .brand-text{font-size:1.45rem;}
+      .brand-sub{font-size:.52rem;}
+      .hero{padding:46px 0 34px;}
+      .hero-visual{display:none;}
+      .hero-actions{flex-direction:column;}
+      .btn{width:100%;}
+      .trust-row{grid-template-columns:1fr;}
+      .card,.template-card{grid-column:span 12;}
+      .kpis{grid-template-columns:repeat(2,1fr);}
+      section{padding:46px 0;}
+      .whatsapp-float{right:16px;bottom:16px;width:54px;height:54px;}
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="ThinkBI">
+        <div class="brand-mark">↗</div>
+        <div>
+          <div class="brand-text">Think<span>BI</span></div>
+          <div class="brand-sub">DATA · INSIGHT · IMPACT</div>
+        </div>
+      </a>
 
-    <!-- Topbar -->
-    <div class="topbar">
-      <div class="brandline">
-        <img src="Logo - Clean  v1.png" alt="ThinkBI" class="logo-top">
-      </div>
-
-      <nav class="nav" aria-label="Navegação">
-        <a href="#historia">História</a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#historia">Quem somos</a>
         <a href="#integracoes">Integrações</a>
         <a href="#servicos">Serviços</a>
         <a href="#templates">Reports</a>
+        <a href="#beneficios">Benefícios</a>
         <a href="diagnostico.html" class="nav-cta">Diagnóstico Gratuito</a>
-        <a href="#contacto">Contactos</a>
       </nav>
     </div>
+  </header>
 
-    <!-- Hero -->
-    <header class="hero">
-      <div class="eyebrow">ThinkBI® · Marca registada</div>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">ThinkBI® · Marca registada</div>
+          <h1>Transformamos dados em <span>decisões</span> que impulsionam o seu negócio.</h1>
+          <p>
+            Soluções de Business Intelligence com Power BI, SQL, ETL e Inteligência Artificial
+            para empresas que querem mais controlo, eficiência e resultados.
+          </p>
 
-      <h1>Transformamos dados dispersos em decisões claras.</h1>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="diagnostico.html">Agendar Diagnóstico Gratuito</a>
+            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20Gratuito." target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+          </div>
+        </div>
 
-      <div class="tagline">Business Intelligence, Power BI, SQL &amp; Inteligência Artificial</div>
-
-      <p class="subtitle">
-        A ThinkBI ajuda empresas a integrar dados de ERP, Excel, SQL Server e outras plataformas,
-        criando dashboards claros, automatizados e preparados para uma gestão mais eficiente,
-        com apoio de Inteligência Artificial aplicada ao negócio.
-      </p>
-
-      <div class="tech-pills" aria-label="Tecnologias e áreas de atuação">
-        <span class="tech-pill">Power BI</span>
-        <span class="tech-pill">SQL Server</span>
-        <span class="tech-pill">ETL</span>
-        <span class="tech-pill">ERP</span>
-        <span class="tech-pill">Excel</span>
-        <span class="tech-pill">IA</span>
+        <div class="hero-visual" aria-label="Mockup de dashboard ThinkBI">
+          <div class="laptop">
+            <div class="screen">
+              <div class="kpis">
+                <div class="kpi"><small>Receitas</small><strong>€1.230K</strong><span>+12.5%</span></div>
+                <div class="kpi"><small>Margem</small><strong>€320K</strong><span>+8.1%</span></div>
+                <div class="kpi"><small>Pedidos</small><strong>2.540</strong><span>+15.3%</span></div>
+                <div class="kpi"><small>Clientes</small><strong>1.210</strong><span>+10.2%</span></div>
+              </div>
+              <div class="chart-grid">
+                <div class="chart-card">
+                  <strong style="color:var(--navy);font-size:.82rem;">Receita por mês</strong>
+                  <div class="bars">
+                    <div class="bar" style="height:45%"></div>
+                    <div class="bar" style="height:62%"></div>
+                    <div class="bar" style="height:52%"></div>
+                    <div class="bar" style="height:80%"></div>
+                    <div class="bar" style="height:72%"></div>
+                    <div class="bar" style="height:92%"></div>
+                  </div>
+                </div>
+                <div class="chart-card">
+                  <strong style="color:var(--navy);font-size:.82rem;">Objetivo</strong>
+                  <div class="donut"><span>62%</span></div>
+                </div>
+              </div>
+              <div class="chart-card" style="min-height:75px;">
+                <strong style="color:var(--navy);font-size:.82rem;">Evolução mensal</strong>
+                <div style="height:32px;margin-top:12px;background:linear-gradient(90deg,#dbeafe,#bfdbfe,#60a5fa,#1f6fe5);border-radius:999px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="cta-row">
-        <a class="btn btn-primary" href="diagnostico.html">🚀 Agendar Diagnóstico Gratuito</a>
-        <a class="btn btn-ghost" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20Gratuito." target="_blank" rel="noopener">💬 Falar por WhatsApp</a>
-        <a class="btn btn-ghost" href="#integracoes">🔗 Ver integrações</a>
-      </div>
-    </header>
-
-    <!-- Banner -->
-    <section class="banner-impact">
-      <img
-        src="Banner%20Linkedin%20direita.png"
-        alt="ThinkBI — Dados claros. Decisões inteligentes."
-      >
-    </section>
-
-    <!-- História -->
-    <section class="section" id="historia">
-      <div class="section-head">
-        <h2>A História da ThinkBI</h2>
-        <p class="lead">
-          Uma marca criada para aproximar os dados da realidade operacional das empresas.
-        </p>
-      </div>
-
-      <div class="story">
-        <p>
-          A ThinkBI nasceu da necessidade de transformar dados empresariais dispersos em informação clara,
-          consistente e útil para decisão.
-        </p>
-        <p>
-          Com experiência em ambientes ERP, SQL Server, ETL e Business Intelligence, o objetivo sempre foi
-          criar soluções práticas, adaptadas à realidade das empresas e orientadas a resultados.
-        </p>
-        <p>
-          Hoje, a ThinkBI combina Power BI, integração de dados e Inteligência Artificial para ajudar
-          organizações a ganhar visibilidade, eficiência e capacidade de decisão.
-        </p>
-        <p>
-          O registo oficial da marca ThinkBI® representa mais um passo na consolidação deste projeto
-          e da sua visão de longo prazo.
-        </p>
-
-        <div class="milestones">
-          <div class="milestone">✓ Marca registada</div>
-          <div class="milestone">✓ Domínio próprio</div>
-          <div class="milestone">✓ Plataforma própria</div>
-          <div class="milestone">✓ Templates Power BI</div>
-          <div class="milestone">✓ Diagnóstico BI gratuito</div>
-          <div class="milestone">✓ SQL, ETL &amp; IA</div>
+      <div class="wrap">
+        <div class="trust-row">
+          <div class="trust-item">
+            <div class="trust-icon">🛡️</div>
+            <div><h3>Experiência Real</h3><p>Ambientes ERP, SQL Server, Excel, APIs e muito mais.</p></div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">👤</div>
+            <div><h3>Aproximação Humana</h3><p>Soluções adaptadas à realidade de cada empresa.</p></div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🚀</div>
+            <div><h3>Resultados que impulsionam</h3><p>Mais eficiência, melhor decisão e maior crescimento.</p></div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🏅</div>
+            <div><h3>Marca Registada</h3><p>Compromisso com qualidade, confiança e continuidade.</p></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Desafio -->
-    <section class="section" id="desafio">
-      <div class="section-head">
-        <h2>O Desafio das Empresas</h2>
-        <p class="lead">Problemas recorrentes que afetam a visibilidade, a confiança nos dados e a tomada de decisão.</p>
-      </div>
-
-      <div class="list">
-        <ul>
-          <li><span class="dot">•</span> Informação dispersa por vários sistemas: ERP, Excel, CRM, WMS ou plataformas externas.</li>
-          <li><span class="dot">•</span> Relatórios manuais, demorados e dependentes de processos repetitivos.</li>
-          <li><span class="dot">•</span> Dificuldade em acompanhar indicadores críticos em tempo útil.</li>
-          <li><span class="dot">•</span> Diferenças entre ficheiros, departamentos ou sistemas de origem.</li>
-          <li><span class="dot">•</span> Decisões tomadas sem dados consolidados, fiáveis e atualizados.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Integrações -->
-    <section class="section" id="integracoes">
-      <div class="section-head">
-        <h2>Integração com os seus sistemas</h2>
-        <p class="lead">
-          A ThinkBI trabalha sobre a realidade tecnológica da sua empresa, integrando dados de ERP,
-          SQL Server, Excel, APIs, cloud e soluções de Inteligência Artificial.
-        </p>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <h3><span class="pill">🏢</span> ERP</h3>
-          <p>
-            Integração e análise de dados provenientes de sistemas como PHC, SAGE X3,
-            Primavera, SAP, Business Central, Navision, Cegid, Eticadata, Moloni e outros.
+    <section id="integracoes" class="light-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Integração com os seus sistemas</div>
+          <h2>Ligações inteligentes. Dados que fluem.</h2>
+          <p class="lead">
+            Integramos e transformamos dados de múltiplas fontes para criar informação fiável,
+            acionável e preparada para análise.
           </p>
         </div>
 
-        <div class="card">
-          <h3><span class="pill">🗄️</span> SQL Server</h3>
-          <p>
-            Criação de views, modelos de dados, queries otimizadas e camadas analíticas
-            preparadas para Power BI e reporting empresarial.
+        <div class="cards">
+          <article class="card"><div class="card-icon">🏢</div><h3>ERP</h3><p>Integração com PHC, SAGE X3, Primavera, SAP, Business Central, Navision, Cegid, Eticadata, Moloni e outros.</p></article>
+          <article class="card"><div class="card-icon">🗄️</div><h3>SQL Server</h3><p>Modelação de dados, views, queries otimizadas e camadas analíticas robustas.</p></article>
+          <article class="card"><div class="card-icon">📊</div><h3>Excel</h3><p>Consolidação de ficheiros, automação de processos e transformação de dados em informação útil.</p></article>
+          <article class="card"><div class="card-icon">🔌</div><h3>APIs</h3><p>Ligação a plataformas externas e serviços online através de integrações estruturadas.</p></article>
+          <article class="card"><div class="card-icon">☁️</div><h3>Cloud</h3><p>Soluções cloud seguras, escaláveis e com acesso controlado à informação.</p></article>
+          <article class="card"><div class="card-icon">🧠</div><h3>IA</h3><p>Aplicação de Inteligência Artificial para análise, documentação, previsão e automação de reporting.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia">
+      <div class="wrap story-grid">
+        <div>
+          <div class="section-kicker">A história da ThinkBI</div>
+          <div class="story-title">De experiência real nasce informação que gera impacto.</div>
+        </div>
+
+        <div class="story-text">
+          <p>A ThinkBI nasceu da necessidade de transformar dados empresariais dispersos em informação clara, consistente e útil para decisão.</p>
+          <p>Com experiência em ambientes ERP, SQL Server, ETL e Business Intelligence, o objetivo sempre foi aproximar a tecnologia da realidade operacional das empresas.</p>
+          <p>Hoje, combinamos Power BI, integração de dados e Inteligência Artificial para ajudar organizações a ganhar visibilidade, eficiência e capacidade de decisão.</p>
+          <p><strong>Marca registada. Compromisso com o futuro.</strong></p>
+        </div>
+
+        <div class="badge-card">
+          <div class="big">🏅</div>
+          <h3>Marca Registada</h3>
+          <p>ThinkBI® é uma marca registada, sinónimo de qualidade, confiança e compromisso.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="light-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">O que fazemos</div>
+          <h2>Soluções de dados que criam valor.</h2>
+          <p class="lead">Não fazemos apenas dashboards. Estruturamos dados, criamos indicadores fiáveis e desenvolvemos soluções de análise orientadas à decisão.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card"><div class="card-icon">📈</div><h3>Dashboards & Power BI</h3><p>Dashboards interativos, claros e focados no que realmente importa para a gestão.</p></article>
+          <article class="card"><div class="card-icon">🧱</div><h3>SQL & ETL</h3><p>Estruturação, integração e transformação de dados com desempenho e fiabilidade.</p></article>
+          <article class="card"><div class="card-icon">🧠</div><h3>IA & Automação</h3><p>Aplicação de IA para análise, apoio à decisão, documentação e automação de reporting.</p></article>
+          <article class="card"><div class="card-icon">🎯</div><h3>Consultoria & Estratégia</h3><p>Acompanhamento próximo para definir indicadores, processos e soluções à medida.</p></article>
+          <article class="card"><div class="card-icon">💶</div><h3>Margens & Custos</h3><p>Análise de custos, margens, faturação, desvios e rentabilidade por cliente, artigo ou área.</p></article>
+          <article class="card"><div class="card-icon">🔐</div><h3>Dados Controlados</h3><p>Criação de modelos e views SQL controladas para reporting, análise e IA com maior segurança.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="templates">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Templates de Reports</div>
+          <h2>Exemplos visuais de análise.</h2>
+          <p class="lead">Dashboards demonstrativos Power BI com dados ilustrativos. Clique para ampliar.</p>
+        </div>
+
+        <div class="templates-grid">
+          <article class="template-card">
+            <button class="template-btn" data-full="assets/templates/administracao.webp" data-title="Dashboard Executivo">
+              <img src="assets/templates/administracao.webp" alt="Template ThinkBI — Dashboard Executivo" loading="lazy">
+            </button>
+            <h3>Dashboard Executivo</h3>
+            <p>KPIs de gestão, evolução e performance.</p>
+          </article>
+
+          <article class="template-card">
+            <button class="template-btn" data-full="assets/templates/comercial.webp" data-title="Análise Comercial e Vendas">
+              <img src="assets/templates/comercial.webp" alt="Template ThinkBI — Análise Comercial e Vendas" loading="lazy">
+            </button>
+            <h3>Análise Comercial e Vendas</h3>
+            <p>Vendas, funil, produto, top clientes e região.</p>
+          </article>
+
+          <article class="template-card">
+            <button class="template-btn" data-full="assets/templates/controlo-financeiro.webp" data-title="Controlo Financeiro e Margens">
+              <img src="assets/templates/controlo-financeiro.webp" alt="Template ThinkBI — Controlo Financeiro e Margens" loading="lazy">
+            </button>
+            <h3>Controlo Financeiro e Margens</h3>
+            <p>Receitas, custos, margens, desvios e análise mensal.</p>
+          </article>
+
+          <article class="template-card">
+            <button class="template-btn" data-full="assets/templates/logistica.webp" data-title="Logística e Operações">
+              <img src="assets/templates/logistica.webp" alt="Template ThinkBI — Logística e Operações" loading="lazy">
+            </button>
+            <h3>Logística e Operações</h3>
+            <p>Envios, custo médio, SLA e taxa de atrasos.</p>
+          </article>
+
+          <article class="template-card">
+            <button class="template-btn" data-full="assets/templates/rh.webp" data-title="Recursos Humanos">
+              <img src="assets/templates/rh.webp" alt="Template ThinkBI — Recursos Humanos" loading="lazy">
+            </button>
+            <h3>Recursos Humanos</h3>
+            <p>Colaboradores, turnover, absentismo e custos.</p>
+          </article>
+
+          <article class="template-card">
+            <button class="template-btn" data-full="assets/templates/qualidade-dados.webp" data-title="Qualidade de Dados">
+              <img src="assets/templates/qualidade-dados.webp" alt="Template ThinkBI — Qualidade de Dados" loading="lazy">
+            </button>
+            <h3>Qualidade de Dados</h3>
+            <p>Completude, erros, origem e histórico de validação.</p>
+          </article>
+        </div>
+
+        <div class="lb" id="lb" aria-hidden="true">
+          <div class="lb-backdrop" data-close="1"></div>
+          <figure class="lb-content" role="dialog" aria-modal="true" aria-label="Pré-visualização do template">
+            <button class="lb-close" type="button" aria-label="Fechar" data-close="1">×</button>
+            <figcaption class="lb-title" id="lbTitle"></figcaption>
+            <img class="lb-img" id="lbImg" alt="">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="light-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Benefícios</div>
+          <h2>Menos esforço manual. Mais decisão.</h2>
+          <p class="lead">Impacto direto na operação, gestão e capacidade de decisão.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card"><div class="card-icon">⚡</div><h3>Reporting mais rápido</h3><p>Redução do tempo gasto em tarefas manuais, ficheiros e validações repetitivas.</p></article>
+          <article class="card"><div class="card-icon">✅</div><h3>Dados mais fiáveis</h3><p>Indicadores consistentes entre departamentos, sistemas e relatórios.</p></article>
+          <article class="card"><div class="card-icon">🔎</div><h3>Mais visibilidade</h3><p>Identificação rápida de desvios, oportunidades, riscos e tendências.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="wrap">
+        <div class="contact-box">
+          <div class="section-kicker" style="color:var(--orange)">Diagnóstico BI Gratuito</div>
+          <h2>Vamos perceber onde os seus dados podem gerar mais valor?</h2>
+          <p class="lead">
+            Uma conversa inicial para avaliar a realidade atual da empresa e identificar oportunidades
+            em Power BI, SQL, ETL, ERP e IA.
           </p>
-        </div>
 
-        <div class="card">
-          <h3><span class="pill">📄</span> Excel</h3>
-          <p>
-            Consolidação de ficheiros Excel, eliminação de processos manuais e transformação
-            de folhas dispersas em informação consistente.
-          </p>
-        </div>
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="btn btn-primary" style="background:linear-gradient(135deg,var(--orange),#f59e0b);color:#061B3A;" href="diagnostico.html">Agendar Diagnóstico Gratuito</a>
+            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20Gratuito." target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+            <a class="btn btn-secondary" href="mailto:geral@thinkbi.pt">✉️ Enviar email</a>
+          </div>
 
-        <div class="card">
-          <h3><span class="pill">🔌</span> APIs</h3>
-          <p>
-            Ligação a plataformas externas, serviços online e fontes de dados adicionais
-            através de integrações estruturadas.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3><span class="pill">☁️</span> Cloud</h3>
-          <p>
-            Preparação de soluções para ambientes cloud, partilha segura de dashboards
-            e acesso controlado à informação.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3><span class="pill">🧠</span> IA</h3>
-          <p>
-            Aplicação de Inteligência Artificial sobre dados organizados, com foco em análise,
-            documentação, apoio à decisão e automação de reporting.
-          </p>
+          <div class="mail">✉️ <a href="mailto:geral@thinkbi.pt">geral@thinkbi.pt</a></div>
+          <div class="legal"><a href="#" data-open-legal="1">Legal</a></div>
+          <div class="footer">© ThinkBI — Consultoria BI, Power BI, SQL & IA</div>
         </div>
       </div>
     </section>
+  </main>
 
-    <!-- Serviços -->
-    <section class="section" id="servicos">
-      <div class="section-head">
-        <h2>O que fazemos</h2>
-        <p class="lead">
-          Não fazemos apenas dashboards. Estruturamos dados, criamos indicadores fiáveis
-          e desenvolvemos soluções de análise orientadas à decisão.
-        </p>
-      </div>
+  <a class="whatsapp-float" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20Gratuito." target="_blank" rel="noopener" aria-label="Falar com a ThinkBI por WhatsApp" title="Falar por WhatsApp">💬</a>
 
-      <div class="grid">
-        <div class="card">
-          <h3><span class="pill">🎯</span> Análise de Custos</h3>
-          <p>Validação de faturação, controlo de margens e análise de custos com visão global do negócio.</p>
-        </div>
-
-        <div class="card">
-          <h3><span class="pill">🧩</span> Integração &amp; Normalização de Dados</h3>
-          <p>Consolidação de dados de várias fontes com regras de negócio bem definidas, garantindo consistência e fiabilidade.</p>
-        </div>
-
-        <div class="card">
-          <h3><span class="pill">⚙️</span> ETL &amp; Modelação de Dados</h3>
-          <p>Processos ETL robustos e escaláveis, alinhados com boas práticas, para criar uma base sólida para análise e crescimento.</p>
-        </div>
-
-        <div class="card">
-          <h3><span class="pill">📐</span> Definição de KPIs &amp; Métricas</h3>
-          <p>Tradução de objetivos de negócio em indicadores claros, consistentes e alinhados com a estratégia da organização.</p>
-        </div>
-
-        <div class="card">
-          <h3><span class="pill">📊</span> Dashboards Power BI</h3>
-          <p>Indicadores de gestão claros e consistentes para vendas, logística, stocks, produção e direção.</p>
-        </div>
-
-        <div class="card">
-          <h3><span class="pill">🧠</span> BI &amp; Inteligência Artificial</h3>
-          <p>Aplicação prática de IA sobre dados organizados, views SQL controladas e modelos preparados para análise e apoio à decisão.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Templates de Reports -->
-    <section class="section" id="templates">
-      <div class="section-head">
-        <h2>Templates de Reports</h2>
-        <p class="lead">
-          Exemplos demonstrativos de dashboards Power BI (dados ilustrativos) — clique para ampliar.
-        </p>
-      </div>
-
-      <div class="templates-grid">
-        <article class="template-card">
-          <button class="template-btn" data-full="assets/templates/administracao.webp" data-title="Dashboard Executivo">
-            <img src="assets/templates/administracao.webp" alt="Template ThinkBI — Dashboard Executivo" loading="lazy">
-          </button>
-          <h3>Dashboard Executivo</h3>
-          <p>KPIs de gestão, evolução, performance por região/segmento.</p>
-        </article>
-
-        <article class="template-card">
-          <button class="template-btn" data-full="assets/templates/comercial.webp" data-title="Análise Comercial e Vendas">
-            <img src="assets/templates/comercial.webp" alt="Template ThinkBI — Análise Comercial e Vendas" loading="lazy">
-          </button>
-          <h3>Análise Comercial e Vendas</h3>
-          <p>Vendas, funil, produto, top clientes e mapa por região.</p>
-        </article>
-
-        <article class="template-card">
-          <button class="template-btn" data-full="assets/templates/controlo-financeiro.webp" data-title="Controlo Financeiro e Margens">
-            <img src="assets/templates/controlo-financeiro.webp" alt="Template ThinkBI — Controlo Financeiro e Margens" loading="lazy">
-          </button>
-          <h3>Controlo Financeiro e Margens</h3>
-          <p>Receitas vs custos, margem líquida, desvios e análise mensal.</p>
-        </article>
-
-        <article class="template-card">
-          <button class="template-btn" data-full="assets/templates/logistica.webp" data-title="Logística e Operações">
-            <img src="assets/templates/logistica.webp" alt="Template ThinkBI — Logística e Operações" loading="lazy">
-          </button>
-          <h3>Logística e Operações</h3>
-          <p>Envios, custo médio por envio, SLA e taxa de atrasos.</p>
-        </article>
-
-        <article class="template-card">
-          <button class="template-btn" data-full="assets/templates/rh.webp" data-title="Recursos Humanos">
-            <img src="assets/templates/rh.webp" alt="Template ThinkBI — Recursos Humanos" loading="lazy">
-          </button>
-          <h3>Recursos Humanos</h3>
-          <p>Colaboradores, turnover, absentismo, desempenho e custos por departamento.</p>
-        </article>
-
-        <article class="template-card">
-          <button class="template-btn" data-full="assets/templates/qualidade-dados.webp" data-title="Qualidade de Dados">
-            <img src="assets/templates/qualidade-dados.webp" alt="Template ThinkBI — Qualidade de Dados" loading="lazy">
-          </button>
-          <h3>Qualidade de Dados</h3>
-          <p>Completude, erros, origem e histórico de validação.</p>
-        </article>
-      </div>
-
-      <!-- Lightbox -->
-      <div class="lb" id="lb" aria-hidden="true">
-        <div class="lb-backdrop" data-close="1"></div>
-        <figure class="lb-content" role="dialog" aria-modal="true" aria-label="Pré-visualização do template">
-          <button class="lb-close" type="button" aria-label="Fechar" data-close="1">×</button>
-          <figcaption class="lb-title" id="lbTitle"></figcaption>
-          <img class="lb-img" id="lbImg" alt="">
-        </figure>
-      </div>
-    </section>
-
-    <!-- Abordagem -->
-    <section class="section" id="abordagem">
-      <div class="section-head">
-        <h2>A Nossa Abordagem</h2>
-        <p class="lead">Processo simples e repetível para chegar a soluções que a equipa realmente utiliza.</p>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <h3><span class="pill">1</span> Diagnóstico</h3>
-          <p>Compreensão do negócio, sistemas existentes, dores atuais e indicadores prioritários.</p>
-        </div>
-
-        <div class="card">
-          <h3><span class="pill">2</span> Dados &amp; ETL</h3>
-          <p>Estruturação, limpeza, transformação e preparação dos dados para análise fiável.</p>
-        </div>
-
-        <div class="card">
-          <h3><span class="pill">3</span> Dashboard &amp; Evolução</h3>
-          <p>Dashboards claros, formação, adoção pela equipa e evolução contínua da solução.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Benefícios -->
-    <section class="section" id="beneficios">
-      <div class="section-head">
-        <h2>Benefícios</h2>
-        <p class="lead">Impacto direto na operação, gestão e capacidade de decisão.</p>
-      </div>
-
-      <div class="list">
-        <ul>
-          <li><span class="dot">•</span> Identificar desvios e oportunidades rapidamente.</li>
-          <li><span class="dot">•</span> Reduzir tempo gasto em reporting manual.</li>
-          <li><span class="dot">•</span> Aumentar eficiência, produtividade e visibilidade operacional.</li>
-          <li><span class="dot">•</span> Criar indicadores consistentes entre departamentos.</li>
-          <li><span class="dot">•</span> Preparar dados para análise avançada e Inteligência Artificial.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Contactos -->
-    <section class="contact" id="contacto">
-      <h2>Agendar Diagnóstico BI Gratuito</h2>
-
-      <p class="lead">
-        Uma conversa inicial para perceber a realidade atual da empresa e identificar oportunidades
-        de melhoria em Power BI, SQL, ETL, ERP e IA.
-      </p>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="diagnostico.html">🚀 Agendar Diagnóstico Gratuito</a>
-        <a class="btn btn-ghost" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20Gratuito." target="_blank" rel="noopener">💬 Falar por WhatsApp</a>
-        <a class="btn btn-ghost" href="mailto:geral@thinkbi.pt">✉️ Enviar email</a>
-      </div>
-
-      <div class="mail">
-        ✉️ <a href="mailto:geral@thinkbi.pt">geral@thinkbi.pt</a>
-      </div>
-
-      <div class="legal">
-        <a href="#" data-open-legal="1">Legal</a>
-      </div>
-
-      <div class="footer">© ThinkBI — Consultoria BI, Power BI, SQL &amp; IA</div>
-    </section>
-
-  </div>
-
-
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20Gratuito."
-    target="_blank"
-    rel="noopener"
-    aria-label="Falar com a ThinkBI por WhatsApp"
-    title="Falar por WhatsApp"
-  >💬</a>
-
-  <!-- Modal Legal -->
   <div class="modal" id="legalModal" aria-hidden="true">
     <div class="modal-backdrop" data-close-legal="1"></div>
-
     <section class="modal-panel" role="dialog" aria-modal="true" aria-label="Informação Legal">
       <div class="modal-head">
         <h3 class="modal-title">Informação Legal</h3>
         <button class="modal-close" type="button" aria-label="Fechar" data-close-legal="1">×</button>
       </div>
-
       <div class="modal-body">
         <h4>Informação Legal</h4>
         <p><strong>ThinkBI®</strong> é uma marca registada utilizada no âmbito de atividade profissional independente em Portugal.</p>
@@ -966,7 +731,6 @@
     </section>
   </div>
 
-  <!-- Lightbox JS -->
   <script>
     (function () {
       const lb = document.getElementById('lb');
@@ -988,9 +752,7 @@
       }
 
       document.querySelectorAll('.template-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          openLB(btn.dataset.full, btn.dataset.title);
-        });
+        btn.addEventListener('click', () => openLB(btn.dataset.full, btn.dataset.title));
       });
 
       lb.addEventListener('click', (e) => {
@@ -1003,7 +765,6 @@
     })();
   </script>
 
-  <!-- Modal Legal JS -->
   <script>
     (function () {
       const modal = document.getElementById('legalModal');

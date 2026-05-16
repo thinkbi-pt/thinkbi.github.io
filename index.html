@@ -6,14 +6,14 @@
   <title>ThinkBI - Consultoria BI</title>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WX3JMPTLQ4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WX3JMPTLQ4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-WX3JMPTLQ4');
-</script>
+    gtag('config', 'G-WX3JMPTLQ4');
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,6 @@
     a{color:inherit;text-decoration:none;}
     .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 80px;}
 
-    /* Topbar */
     .topbar{
       display:flex;
       align-items:center;
@@ -71,17 +70,15 @@
       height:56px;
       width:auto;
       display:block;
-      background:transparent;
-      border-radius:0;
-      box-shadow:none;
       filter:drop-shadow(0 6px 16px rgba(0,0,0,.18));
     }
-@media (min-width:921px){
-  .logo-top{
-    height:82px;
-    filter:drop-shadow(0 10px 26px rgba(0,0,0,.30));
-  }
-}
+
+    @media (min-width:921px){
+      .logo-top{
+        height:82px;
+        filter:drop-shadow(0 10px 26px rgba(0,0,0,.30));
+      }
+    }
 
     .nav{
       display:flex;
@@ -104,7 +101,19 @@
       background:rgba(255,255,255,.07);
     }
 
-    /* Hero */
+    .nav a.nav-cta{
+      background:linear-gradient(45deg,var(--brand),#f59e0b);
+      color:#0b1226;
+      font-weight:800;
+      box-shadow:0 10px 28px rgba(243,168,35,.22);
+    }
+
+    .nav a.nav-cta:hover{
+      color:#0b1226;
+      transform:translateY(-2px);
+      box-shadow:0 14px 36px rgba(243,168,35,.30);
+    }
+
     .hero{
       border-radius:calc(var(--radius) + 8px);
       background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.06));
@@ -181,7 +190,6 @@
       background:rgba(255,255,255,.10);
     }
 
-    /* Sections */
     .section{margin-top:44px;padding:0 2px;}
     .section-head{text-align:center;margin-bottom:18px;}
 
@@ -201,7 +209,6 @@
       font-size:1.02rem;
     }
 
-    /* Cards */
     .grid{
       display:grid;
       grid-template-columns:repeat(12,1fr);
@@ -249,7 +256,6 @@
 
     .card p{color:var(--muted);line-height:1.65;}
 
-    /* Lists */
     .list{
       max-width:920px;
       margin:16px auto 0;
@@ -264,7 +270,6 @@
     .list li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);line-height:1.6;}
     .dot{color:var(--accent);font-weight:900;margin-top:2px;}
 
-    /* Contact */
     .contact{
       margin-top:40px;
       padding:26px 18px;
@@ -280,7 +285,6 @@
     .mail a:hover{text-decoration:underline;}
     .footer{margin-top:16px;color:rgba(255,255,255,.55);font-size:.9rem;}
 
-    /* Responsive */
     @media (max-width:920px){
       .topbar{flex-direction:column;align-items:center;}
       .brandline{justify-content:center;min-width:auto;}
@@ -289,9 +293,6 @@
       .card{grid-column:span 12;}
     }
 
-    /* =========================================================
-       Templates de Reports (ADICIONADO)
-       ========================================================= */
     .templates-grid{
       display:grid;
       grid-template-columns:repeat(12,1fr);
@@ -344,7 +345,6 @@
       line-height:1.65;
     }
 
-    /* Lightbox */
     .lb{position:fixed;inset:0;display:none;z-index:9999;}
     .lb[aria-hidden="false"]{display:block;}
     .lb-backdrop{position:absolute;inset:0;background:rgba(2,6,23,.65);}
@@ -358,16 +358,22 @@
       overflow:hidden;
       box-shadow:0 24px 60px rgba(0,0,0,.35);
     }
+
     .lb-title{
       padding:12px 14px;
       font-weight:800;
       color:#0b2a5b;
       border-bottom:1px solid #eef2f7;
     }
+
     .lb-img{width:100%;height:auto;display:block;}
+
     .lb-close{
-      position:absolute;right:10px;top:6px;
-      width:36px;height:36px;
+      position:absolute;
+      right:10px;
+      top:6px;
+      width:36px;
+      height:36px;
       border-radius:10px;
       border:1px solid #e5e7eb;
       background:#fff;
@@ -376,41 +382,45 @@
       line-height:1;
     }
 
-    /* Responsive templates */
     @media (max-width:920px){
       .template-card{grid-column:span 12;}
     }
+
     @media (min-width:921px) and (max-width:1100px){
       .template-card{grid-column:span 6;}
     }
 
-    /* =========================================================
-       LEGAL (ADICIONADO - minimalista/discreto)
-       ========================================================= */
     .legal{
       margin-top:14px;
       color:rgba(255,255,255,.55);
       font-size:.86rem;
       line-height:1.55;
     }
+
     .legal a{
       color:rgba(255,255,255,.70);
       font-weight:700;
       text-decoration:underline;
       text-underline-offset:3px;
     }
+
     .legal a:hover{color:var(--text);}
 
     .modal{
-      position:fixed; inset:0;
+      position:fixed;
+      inset:0;
       display:none;
       z-index:10000;
     }
+
     .modal[aria-hidden="false"]{display:block;}
+
     .modal-backdrop{
-      position:absolute; inset:0;
+      position:absolute;
+      inset:0;
       background:rgba(2,6,23,.65);
     }
+
     .modal-panel{
       position:relative;
       width:min(860px, calc(100vw - 28px));
@@ -423,6 +433,7 @@
       box-shadow:0 24px 60px rgba(0,0,0,.35);
       padding:18px 18px 16px;
     }
+
     .modal-head{
       display:flex;
       align-items:flex-start;
@@ -432,6 +443,7 @@
       border-bottom:1px solid #eef2f7;
       margin-bottom:12px;
     }
+
     .modal-title{
       font-family:'Montserrat','Inter',Arial,sans-serif;
       font-weight:800;
@@ -439,8 +451,10 @@
       letter-spacing:-.01em;
       margin:0;
     }
+
     .modal-close{
-      width:38px;height:38px;
+      width:38px;
+      height:38px;
       border-radius:12px;
       border:1px solid #e5e7eb;
       background:#fff;
@@ -449,51 +463,46 @@
       line-height:1;
       flex:0 0 auto;
     }
+
     .modal-body{
       font-size:.95rem;
       line-height:1.65;
       color:#111827;
     }
+
     .modal-body h4{
       margin:14px 0 6px;
       font-size:1.02rem;
       font-weight:900;
       color:#0b2a5b;
     }
+
     .modal-body p{margin:0 0 10px;}
     .modal-body ul{margin:0 0 10px 18px;}
-/* ===============================
-   Banner institucional
-   =============================== */
-.banner-impact{
-  margin:40px 0 60px;
-  padding:16px;
-  background:linear-gradient(
-    180deg,
-    rgba(30,58,138,.85),
-    rgba(30,64,175,.85)
-  );
-  border-radius:calc(var(--radius) + 8px);
-}
 
-.banner-impact img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:calc(var(--radius) + 8px);
-}
+    .banner-impact{
+      margin:40px 0 60px;
+      padding:16px;
+      background:linear-gradient(
+        180deg,
+        rgba(30,58,138,.85),
+        rgba(30,64,175,.85)
+      );
+      border-radius:calc(var(--radius) + 8px);
+    }
 
-
-
-
-    
+    .banner-impact img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:calc(var(--radius) + 8px);
+    }
   </style>
 </head>
 
 <body>
   <div class="wrap">
 
-    <!-- Topbar -->
     <div class="topbar">
       <div class="brandline">
         <img src="Logo - Clean  v1.png" alt="ThinkBI" class="logo-top">
@@ -503,13 +512,12 @@
         <a href="#quem-somos">Quem somos</a>
         <a href="#servicos">Serviços</a>
         <a href="#beneficios">Benefícios</a>
+        <a href="diagnostico.html" class="nav-cta">Diagnóstico Gratuito</a>
         <a href="#contacto">Contactos</a>
       </nav>
     </div>
 
-    <!-- Hero -->
     <header class="hero">
-      
       <h1>Empowering Insights</h1>
       <div class="tagline">Consultoria Business Intelligence &amp; Power BI</div>
 
@@ -519,18 +527,18 @@
       </p>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="#contacto">🚀 Contactar para Projeto-Piloto</a>
+        <a class="btn btn-primary" href="diagnostico.html">🚀 Agendar Diagnóstico Gratuito</a>
         <a class="btn btn-ghost" href="#servicos">📊 Ver serviços</a>
       </div>
     </header>
-<!-- Banner (logo a seguir ao Hero) -->
-<section class="banner-impact">
-  <img
-    src="Banner%20Linkedin%20direita.png"
-    alt="ThinkBI — Dados claros. Decisões inteligentes."
-  >
-</section>
-    <!-- Quem Somos -->
+
+    <section class="banner-impact">
+      <img
+        src="Banner%20Linkedin%20direita.png"
+        alt="ThinkBI — Dados claros. Decisões inteligentes."
+      >
+    </section>
+
     <section class="section" id="quem-somos">
       <div class="section-head">
         <h2>Quem Somos</h2>
@@ -541,7 +549,6 @@
       </div>
     </section>
 
-    <!-- Desafio -->
     <section class="section" id="desafio">
       <div class="section-head">
         <h2>O Desafio das PMEs</h2>
@@ -558,7 +565,6 @@
       </div>
     </section>
 
-    <!-- Serviços -->
     <section class="section" id="servicos">
       <div class="section-head">
         <h2>O que fazemos</h2>
@@ -568,47 +574,38 @@
       </div>
 
       <div class="grid">
-
-        <!-- 1 -->
         <div class="card">
           <h3><span class="pill">🎯</span> Análise de Custos</h3>
           <p>Validação de faturação, controlo de margens e análise de custos com visão global do negócio.</p>
         </div>
 
-        <!-- 2 -->
         <div class="card">
           <h3><span class="pill">🧩</span> Integração &amp; Normalização de Dados</h3>
           <p>Consolidação de dados de várias fontes com normalização e regras de negócio bem definidas, garantindo consistência e fiabilidade.</p>
         </div>
 
-        <!-- 3 -->
         <div class="card">
           <h3><span class="pill">⚙️</span> ETL &amp; Modelação de Dados</h3>
           <p>Processos ETL robustos e escaláveis, alinhados com boas práticas, para criar uma base sólida para análise e crescimento.</p>
         </div>
 
-        <!-- 4 -->
         <div class="card">
           <h3><span class="pill">📐</span> Definição de KPIs &amp; Métricas</h3>
           <p>Tradução de objetivos de negócio em indicadores claros, consistentes e alinhados com a estratégia da organização.</p>
         </div>
 
-        <!-- 5 -->
         <div class="card">
           <h3><span class="pill">📊</span> Dashboards Power BI</h3>
           <p>Indicadores de gestão claros e consistentes para vendas, logística, stocks e direção, com governação e definição de métricas.</p>
         </div>
 
-        <!-- 6 -->
         <div class="card">
-          <h3><span class="pill">🖥️</span> Suporte Técnico &amp; Infraestrutura</h3>
-          <p>Apoio na definição de infraestrutura, equipamentos, software e serviços associados ao desenvolvimento e operação das soluções BI.</p>
+          <h3><span class="pill">🧠</span> BI &amp; Inteligência Artificial</h3>
+          <p>Aplicação prática de IA sobre dados organizados, views SQL controladas e modelos preparados para análise e apoio à decisão.</p>
         </div>
-
       </div>
     </section>
 
-    <!-- Templates de Reports (ADICIONADO) -->
     <section class="section" id="templates">
       <div class="section-head">
         <h2>Templates de Reports</h2>
@@ -618,7 +615,6 @@
       </div>
 
       <div class="templates-grid">
-
         <article class="template-card">
           <button class="template-btn" data-full="assets/templates/administracao.webp" data-title="Dashboard Executivo">
             <img src="assets/templates/administracao.webp" alt="Template ThinkBI — Dashboard Executivo" loading="lazy">
@@ -666,10 +662,8 @@
           <h3>Qualidade de Dados</h3>
           <p>Completude, erros, origem e histórico de validação.</p>
         </article>
-
       </div>
 
-      <!-- Lightbox -->
       <div class="lb" id="lb" aria-hidden="true">
         <div class="lb-backdrop" data-close="1"></div>
         <figure class="lb-content" role="dialog" aria-modal="true" aria-label="Pré-visualização do template">
@@ -680,17 +674,16 @@
       </div>
     </section>
 
-    <!-- Abordagem -->
     <section class="section" id="abordagem">
       <div class="section-head">
         <h2>A Nossa Abordagem</h2>
-        <p class="lead">Processo simples (e repetível) para chegar a dashboards que a equipa usa.</p>
+        <p class="lead">Processo simples e repetível para chegar a dashboards que a equipa usa.</p>
       </div>
 
       <div class="grid">
         <div class="card">
           <h3><span class="pill">1</span> Análise</h3>
-          <p>Compreensão do negócio e dos indicadores que importam (perguntas certas → Indicadores certos).</p>
+          <p>Compreensão do negócio e dos indicadores que importam: perguntas certas, indicadores certos.</p>
         </div>
 
         <div class="card">
@@ -700,12 +693,11 @@
 
         <div class="card">
           <h3><span class="pill">3</span> Visualização</h3>
-          <p>Dashboards claros, interativos e orientados para resultados — com foco na adoção.</p>
+          <p>Dashboards claros, interativos e orientados para resultados, com foco na adoção.</p>
         </div>
       </div>
     </section>
 
-    <!-- Benefícios -->
     <section class="section" id="beneficios">
       <div class="section-head">
         <h2>Benefícios</h2>
@@ -718,28 +710,31 @@
           <li><span class="dot">•</span> Reduzir custos operacionais</li>
           <li><span class="dot">•</span> Aumentar eficiência e produtividade</li>
           <li><span class="dot">•</span> Visibilidade total sobre pontos-chave</li>
+          <li><span class="dot">•</span> Preparar dados para análise avançada e Inteligência Artificial</li>
         </ul>
       </div>
     </section>
 
-    <!-- Contactos -->
     <section class="contact" id="contacto">
       <h2>Contactos</h2>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="diagnostico.html">🚀 Agendar Diagnóstico Gratuito</a>
+      </div>
+
       <div class="mail">
         ✉️ <a href="mailto:geral@thinkbi.pt">geral@thinkbi.pt</a>
       </div>
 
-      <!-- (ADICIONADO) link discreto para o modal Legal -->
       <div class="legal">
         <a href="#" data-open-legal="1">Legal</a>
       </div>
 
-      <div class="footer">© ThinkBI — Consultoria BI</div>
+      <div class="footer">© ThinkBI — Consultoria BI, Power BI, SQL & IA</div>
     </section>
 
   </div>
 
-  <!-- (ADICIONADO) Modal Legal / Privacidade / Cookies (texto minimalista) -->
   <div class="modal" id="legalModal" aria-hidden="true">
     <div class="modal-backdrop" data-close-legal="1"></div>
 
@@ -760,12 +755,11 @@
         <p>O responsável pelo tratamento de dados é o titular do site, contactável através do endereço de email indicado.</p>
 
         <h4>Cookies</h4>
-        <p>Este site não utiliza cookies de marketing ou de rastreio.</p>
+        <p>Este site utiliza Google Analytics para análise estatística de visitas.</p>
       </div>
     </section>
   </div>
 
-  <!-- Lightbox JS (ADICIONADO) -->
   <script>
     (function () {
       const lb = document.getElementById('lb');
@@ -802,7 +796,6 @@
     })();
   </script>
 
-  <!-- (ADICIONADO) Modal Legal JS -->
   <script>
     (function () {
       const modal = document.getElementById('legalModal');

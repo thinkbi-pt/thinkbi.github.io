@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Free BI Diagnostic - ThinkBI</title>
+  <meta name="description" content="Schedule a free Business Intelligence diagnostic session to assess opportunities in Power BI, SQL, ETL, ERP, Excel and Artificial Intelligence." />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WX3JMPTLQ4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WX3JMPTLQ4');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --navy:#061B3A;
+      --blue:#1F6FE5;
+      --blue-2:#1FA3FF;
+      --orange:#F3A823;
+      --text:#071833;
+      --muted:#526174;
+      --soft:#F5F8FD;
+      --soft-2:#EAF2FF;
+      --border:#DDE8F7;
+      --card:#FFFFFF;
+      --shadow:0 18px 50px rgba(6,27,58,.10);
+      --shadow-soft:0 10px 28px rgba(6,27,58,.08);
+      --radius:22px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 420px at 88% 10%, rgba(31,111,229,.13), transparent 65%),
+        radial-gradient(700px 350px at 8% 18%, rgba(31,163,255,.10), transparent 60%),
+        linear-gradient(180deg,#ffffff 0%,#f6f9fe 48%,#ffffff 100%);
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 22px;}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.86);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(221,232,247,.75);
+    }
+
+    .topbar-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:26px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:190px;
+    }
+
+    .brand-logo{
+      height:58px;
+      width:auto;
+      display:block;
+      filter:drop-shadow(0 8px 20px rgba(6,27,58,.10));
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:6px;
+      flex-wrap:wrap;
+    }
+
+    .nav a{
+      padding:10px 12px;
+      color:#1a2d49;
+      font-weight:700;
+      font-size:.94rem;
+      border-radius:12px;
+      transition:.16s ease;
+    }
+
+    .nav a:hover{background:var(--soft-2);color:var(--blue);}
+
+    .nav a.nav-cta{
+      margin-left:4px;
+      background:linear-gradient(135deg,var(--navy),#083b7c);
+      color:#fff;
+      padding:12px 16px;
+      box-shadow:0 12px 28px rgba(6,27,58,.18);
+    }
+
+    .lang-switch{
+      background:#fff;
+      border:1px solid var(--border);
+      color:var(--navy) !important;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .lang-switch:hover{
+      background:var(--soft-2) !important;
+      color:var(--blue) !important;
+    }
+
+
+    .hero{
+      padding:78px 0 54px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1fr .82fr;
+      gap:44px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#fff;
+      border:1px solid var(--border);
+      color:var(--blue);
+      padding:8px 13px;
+      border-radius:999px;
+      font-weight:900;
+      font-size:.92rem;
+      box-shadow:var(--shadow-soft);
+      margin-bottom:20px;
+    }
+
+    h1{
+      font-family:'Montserrat','Inter',Arial,sans-serif;
+      font-size:clamp(2.45rem,5vw,4.55rem);
+      line-height:1.03;
+      letter-spacing:-.06em;
+      color:var(--navy);
+      margin-bottom:22px;
+    }
+
+    h1 span{color:var(--blue);}
+
+    .hero p{
+      color:var(--muted);
+      max-width:720px;
+      font-size:1.1rem;
+      line-height:1.75;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border-radius:14px;
+      padding:15px 20px;
+      font-weight:900;
+      transition:.18s ease;
+      border:1px solid transparent;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--navy),#093f83);
+      color:#fff;
+      box-shadow:0 15px 34px rgba(6,27,58,.18);
+    }
+
+    .btn-primary:hover,.btn-secondary:hover{transform:translateY(-2px);}
+
+    .btn-secondary{
+      background:#fff;
+      color:var(--navy);
+      border-color:#bcd1ee;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .diagnostic-card{
+      background:linear-gradient(145deg,#ffffff,#f1f7ff);
+      border:1px solid var(--border);
+      border-radius:32px;
+      padding:30px;
+      box-shadow:var(--shadow);
+    }
+
+    .diagnostic-card h2{
+      color:var(--navy);
+      font-family:'Montserrat','Inter',Arial,sans-serif;
+      font-size:1.8rem;
+      letter-spacing:-.04em;
+      margin-bottom:16px;
+    }
+
+    .check-list{
+      display:grid;
+      gap:13px;
+      list-style:none;
+      margin-top:18px;
+    }
+
+    .check-list li{
+      display:flex;
+      gap:11px;
+      color:var(--muted);
+      line-height:1.55;
+      font-weight:600;
+    }
+
+    .check{
+      width:24px;
+      height:24px;
+      border-radius:999px;
+      background:rgba(31,111,229,.10);
+      color:var(--blue);
+      display:grid;
+      place-items:center;
+      flex:0 0 auto;
+      font-weight:900;
+    }
+
+    .mini-kpis{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin-top:24px;
+    }
+
+    .mini-kpi{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:16px;
+    }
+
+    .mini-kpi strong{
+      display:block;
+      color:var(--navy);
+      font-size:1.5rem;
+      margin-bottom:4px;
+    }
+
+    .mini-kpi span{
+      color:var(--muted);
+      font-size:.9rem;
+      font-weight:700;
+    }
+
+    section{padding:62px 0;}
+    .light-section{
+      background:linear-gradient(180deg,#f7fbff,#ffffff);
+      border-top:1px solid #eaf1fb;
+      border-bottom:1px solid #eaf1fb;
+    }
+
+    .section-head{text-align:center;max-width:840px;margin:0 auto 32px;}
+    .section-kicker{color:var(--blue);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:900;margin-bottom:10px;}
+    h2{font-family:'Montserrat','Inter',Arial,sans-serif;font-size:clamp(1.8rem,3vw,2.65rem);letter-spacing:-.045em;line-height:1.12;color:var(--navy);margin-bottom:13px;}
+    .lead{color:var(--muted);line-height:1.7;font-size:1.03rem;}
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:18px;
+    }
+
+    .card{
+      grid-column:span 4;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow-soft);
+      transition:.18s ease;
+    }
+
+    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+    .card-icon{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;background:linear-gradient(135deg,#eef6ff,#ffffff);border:1px solid var(--border);font-size:1.65rem;margin-bottom:16px;}
+    .card h3{color:var(--navy);font-size:1.12rem;margin-bottom:10px;}
+    .card p{color:var(--muted);line-height:1.65;font-size:.96rem;}
+
+    .process{
+      counter-reset:step;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .step{
+      position:relative;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:26px 22px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .step::before{
+      counter-increment:step;
+      content:counter(step);
+      width:38px;
+      height:38px;
+      border-radius:13px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--blue),var(--blue-2));
+      color:#fff;
+      font-weight:900;
+      margin-bottom:16px;
+    }
+
+    .step h3{color:var(--navy);margin-bottom:9px;}
+    .step p{color:var(--muted);line-height:1.62;}
+
+    .cta-box{
+      background:linear-gradient(135deg,var(--navy),#063B7E);
+      border-radius:30px;
+      padding:44px 26px;
+      text-align:center;
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+    .cta-box h2{color:#fff;}
+    .cta-box .lead{color:rgba(255,255,255,.78);}
+    .cta-box .btn-secondary{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.22);}
+    .mail{margin-top:18px;color:rgba(255,255,255,.85);font-weight:800;}
+    .mail a{color:var(--orange);}
+    .footer{margin-top:18px;color:rgba(255,255,255,.58);font-size:.9rem;}
+
+    .legal{margin-top:16px;font-size:.86rem;}
+    .legal a{color:rgba(255,255,255,.7);text-decoration:underline;text-underline-offset:3px;}
+
+    .whatsapp-float{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      z-index:9998;
+      width:58px;
+      height:58px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:#25D366;
+      color:#fff;
+      box-shadow:0 16px 40px rgba(0,0,0,.22);
+      border:1px solid rgba(255,255,255,.8);
+      transition:.18s ease;
+      font-size:1.55rem;
+    }
+
+    .whatsapp-float:hover{transform:translateY(-3px) scale(1.03);}
+
+    .modal{position:fixed;inset:0;display:none;z-index:10000;}
+    .modal[aria-hidden="false"]{display:block;}
+    .modal-backdrop{position:absolute;inset:0;background:rgba(6,27,58,.72);}
+    .modal-panel{position:relative;width:min(860px, calc(100vw - 28px));margin:18px auto;max-height:calc(100vh - 36px);overflow:auto;background:#fff;color:#111827;border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.35);padding:20px;}
+    .modal-head{display:flex;justify-content:space-between;gap:14px;padding-bottom:10px;border-bottom:1px solid #eef2f7;margin-bottom:12px;}
+    .modal-title{font-family:'Montserrat','Inter',Arial,sans-serif;font-weight:900;color:var(--navy);}
+    .modal-close{width:38px;height:38px;border-radius:12px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:22px;}
+    .modal-body{line-height:1.65;color:#111827;}
+    .modal-body h4{margin:14px 0 6px;color:var(--navy);}
+
+    @media (max-width:980px){
+      .topbar-inner{flex-direction:column;}
+      .nav{justify-content:center;}
+      .hero-grid{grid-template-columns:1fr;}
+      .card{grid-column:span 6;}
+      .process{grid-template-columns:1fr 1fr;}
+    }
+
+    @media (max-width:640px){
+      .wrap{padding:0 16px;}
+      .topbar-inner{padding:14px 16px;}
+      .brand-logo{height:48px;}
+      .hero{padding:46px 0 34px;}
+      .hero-actions{flex-direction:column;}
+      .btn{width:100%;}
+      .diagnostic-card{padding:22px;}
+      .mini-kpis{grid-template-columns:1fr;}
+      .card{grid-column:span 12;}
+      .process{grid-template-columns:1fr;}
+      section{padding:46px 0;}
+      .whatsapp-float{right:16px;bottom:16px;width:54px;height:54px;}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html" aria-label="ThinkBI">
+        <img src="Logo - Clean  v1.png" alt="ThinkBI" class="brand-logo">
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index-en.html">Home</a>
+        <a href="#o-que-e">Diagnostic</a>
+        <a href="#ia">AI</a>
+        <a href="#processo">Process</a>
+        <a href="#contacto" class="nav-cta">Schedule</a>
+        <a href="diagnostico.html" class="lang-switch">🌐 PT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Free BI Diagnostic · 30 minutes</div>
+          <h1>Discover where your data can create <span>more value</span>.</h1>
+          <p>
+            An initial conversation to assess your company’s current reality and identify opportunities
+            in Power BI, SQL, ETL, ERP, Excel and business-focused Artificial Intelligence.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:geral@thinkbi.pt?subject=Free BI Diagnostic Request">Schedule by email</a>
+            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20free%20BI%20diagnostic%20session." target="_blank" rel="noopener">💬 Talk on WhatsApp</a>
+          </div>
+        </div>
+
+        <aside class="diagnostic-card">
+          <h2>What becomes clear in the diagnostic?</h2>
+          <ul class="check-list">
+            <li><span class="check">✓</span> Which data sources exist and how they can be integrated.</li>
+            <li><span class="check">✓</span> Which critical indicators should be monitored.</li>
+            <li><span class="check">✓</span> Where manual tasks can be automated.</li>
+            <li><span class="check">✓</span> How to prepare data for dashboards and AI securely.</li>
+          </ul>
+
+          <div class="mini-kpis">
+            <div class="mini-kpi"><strong>30m</strong><span>initial conversation</span></div>
+            <div class="mini-kpi"><strong>0€</strong><span>no commitment</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="o-que-e" class="light-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">When it makes sense</div>
+          <h2>You have data, but not yet clear information?</h2>
+          <p class="lead">This diagnostic is designed for companies that want to improve reporting, control and decision-making with more reliable data.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card"><div class="card-icon">📄</div><h3>Scattered Excel files</h3><p>Multiple files, different values, manual formulas and difficulty ensuring consistency.</p></article>
+          <article class="card"><div class="card-icon">🏢</div><h3>Underused ERP</h3><p>The ERP contains data, but there is no clear view of sales, margins, stock, production or operations.</p></article>
+          <article class="card"><div class="card-icon">⏱️</div><h3>Time-consuming reporting</h3><p>Reports created manually, dependent on people and difficult to update in time.</p></article>
+          <article class="card"><div class="card-icon">📊</div><h3>Power BI needs structure</h3><p>Need for clear dashboards, consistent models and reliable metrics.</p></article>
+          <article class="card"><div class="card-icon">🧱</div><h3>Data without an analytical layer</h3><p>Lack of SQL, views, ETL or models prepared for analysis and growth.</p></article>
+          <article class="card"><div class="card-icon">🧠</div><h3>Secure AI</h3><p>Interest in applying AI to business data without exposing sensitive or disorganized information.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ia">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Business Intelligence with AI</div>
+          <h2>AI needs organized data.</h2>
+          <p class="lead">
+            Before applying Artificial Intelligence, it is essential to structure data, rules, permissions and models.
+            ThinkBI helps build that foundation.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card"><div class="card-icon">🔐</div><h3>Controlled SQL views</h3><p>Query layers prepared for analysis, avoiding direct exposure of sensitive tables.</p></article>
+          <article class="card"><div class="card-icon">💬</div><h3>Natural language exploration</h3><p>Data preparation for questions, assisted analysis and interpretation of indicators.</p></article>
+          <article class="card"><div class="card-icon">⚙️</div><h3>Reporting automation</h3><p>Support for documentation, analysis, alerts, data reading and repetitive processes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="processo" class="light-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">How it works</div>
+          <h2>Processo simples, direto e no commitment.</h2>
+          <p class="lead">The goal is not to sell a solution in a hurry. It is to understand whether there is a real improvement opportunity.</p>
+        </div>
+
+        <div class="process">
+          <div class="step"><h3>Contact</h3><p>Send a message by email or WhatsApp with a brief description of your current reality.</p></div>
+          <div class="step"><h3>Initial meeting</h3><p>We discuss systems, reports, current pain points, indicators and business goals.</p></div>
+          <div class="step"><h3>Opportunity identification</h3><p>We assess possibilities in Power BI, SQL, ETL, automation and AI applied to data.</p></div>
+          <div class="step"><h3>Next step</h3><p>If it makes sense, a roadmap or proposal is prepared according to the company’s reality.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="wrap">
+        <div class="cta-box">
+          <div class="section-kicker" style="color:var(--orange)">Schedule diagnostic</div>
+          <h2>Let’s understand the potential of your data.</h2>
+          <p class="lead">
+            Send a message with a brief description of your company’s current reality:
+            systems used, existing reports and main difficulties.
+          </p>
+
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="btn btn-primary" style="background:linear-gradient(135deg,var(--orange),#f59e0b);color:#061B3A;" href="mailto:geral@thinkbi.pt?subject=Free BI Diagnostic Request">Schedule by email</a>
+            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20free%20BI%20diagnostic%20session." target="_blank" rel="noopener">💬 Talk on WhatsApp</a>
+          </div>
+
+          <div class="mail">✉️ <a href="mailto:geral@thinkbi.pt">geral@thinkbi.pt</a></div>
+          <div class="legal"><a href="#" data-open-legal="1">Legal</a></div>
+          <div class="footer">© ThinkBI — Diagnóstico BI, Power BI, SQL, ETL & IA</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="whatsapp-float" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20free%20BI%20diagnostic%20session." target="_blank" rel="noopener" aria-label="Talk to ThinkBI on WhatsApp" title="Talk on WhatsApp">💬</a>
+
+  <div class="modal" id="legalModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-legal="1"></div>
+    <section class="modal-panel" role="dialog" aria-modal="true" aria-label="Legal Information">
+      <div class="modal-head">
+        <h3 class="modal-title">Legal Information</h3>
+        <button class="modal-close" type="button" aria-label="Close" data-close-legal="1">×</button>
+      </div>
+      <div class="modal-body">
+        <h4>Legal Information</h4>
+        <p><strong>ThinkBI®</strong> é uma marca registada utilizada no âmbito de atividade profissional independente em Portugal.</p>
+        <p><strong>Contact:</strong> <a href="mailto:geral@thinkbi.pt">geral@thinkbi.pt</a></p>
+
+        <h4>Privacy</h4>
+        <p>Personal data eventually sent by email or WhatsApp is used exclusively to respond to professional contact requests.</p>
+        <p>The legal basis for processing is legitimate interest.</p>
+        <p>The data controller is the website owner, contactable through the indicated email address.</p>
+
+        <h4>Cookies</h4>
+        <p>This website uses Google Analytics for statistical analysis of visits.</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (function () {
+      const modal = document.getElementById('legalModal');
+
+      function openLegal() {
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLegal() {
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('[data-open-legal]').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          openLegal();
+        });
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target.dataset.closeLegal) closeLegal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeLegal();
+      });
+    })();
+  </script>
+</body>
+</html>

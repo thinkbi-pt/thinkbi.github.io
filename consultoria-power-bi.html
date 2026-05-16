@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Business Intelligence em Portugal | ThinkBI</title>
+  <meta name="description" content="Soluções de Business Intelligence em Portugal para empresas que querem transformar dados empresariais em indicadores claros, dashboards e decisões." />
+  <meta name="keywords" content="business intelligence portugal, BI para empresas, soluções business intelligence, dashboards gestão, análise dados empresas" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WX3JMPTLQ4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WX3JMPTLQ4');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+:root{
+  --navy:#061B3A; --blue:#1F6FE5; --blue-2:#1FA3FF; --orange:#F3A823;
+  --text:#071833; --muted:#526174; --soft:#F5F8FD; --soft-2:#EAF2FF;
+  --border:#DDE8F7; --card:#FFFFFF; --shadow:0 18px 50px rgba(6,27,58,.10);
+  --shadow-soft:0 10px 28px rgba(6,27,58,.08); --radius:22px; --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:radial-gradient(900px 420px at 88% 10%, rgba(31,111,229,.13), transparent 65%),
+             radial-gradient(700px 350px at 8% 18%, rgba(31,163,255,.10), transparent 60%),
+             linear-gradient(180deg,#ffffff 0%,#f6f9fe 48%,#ffffff 100%);
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit;}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px;}
+.topbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid rgba(221,232,247,.75);}
+.topbar-inner{max-width:var(--max);margin:0 auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:26px;}
+.brand{display:flex;align-items:center;gap:12px;min-width:190px;}
+.brand-logo{height:58px;width:auto;display:block;filter:drop-shadow(0 8px 20px rgba(6,27,58,.10));}
+.nav{display:flex;align-items:center;justify-content:flex-end;gap:6px;flex-wrap:wrap;}
+.nav a{padding:10px 12px;color:#1a2d49;font-weight:700;font-size:.94rem;border-radius:12px;transition:.16s ease;}
+.nav a:hover{background:var(--soft-2);color:var(--blue);}
+.nav a.nav-cta{margin-left:4px;background:linear-gradient(135deg,var(--navy),#083b7c);color:#fff;padding:12px 16px;box-shadow:0 12px 28px rgba(6,27,58,.18);}
+.hero{padding:78px 0 54px;}
+.hero-grid{display:grid;grid-template-columns:1fr .75fr;gap:44px;align-items:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);color:var(--blue);padding:8px 13px;border-radius:999px;font-weight:900;font-size:.92rem;box-shadow:var(--shadow-soft);margin-bottom:20px;}
+h1{font-family:'Montserrat','Inter',Arial,sans-serif;font-size:clamp(2.35rem,5vw,4.25rem);line-height:1.04;letter-spacing:-.06em;color:var(--navy);margin-bottom:22px;}
+h1 span{color:var(--blue);}
+.hero p{color:var(--muted);max-width:740px;font-size:1.1rem;line-height:1.75;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:14px;padding:15px 20px;font-weight:900;transition:.18s ease;border:1px solid transparent;}
+.btn-primary{background:linear-gradient(135deg,var(--navy),#093f83);color:#fff;box-shadow:0 15px 34px rgba(6,27,58,.18);}
+.btn-secondary{background:#fff;color:var(--navy);border-color:#bcd1ee;box-shadow:var(--shadow-soft);}
+.btn:hover{transform:translateY(-2px);}
+.hero-card{background:linear-gradient(145deg,#ffffff,#f1f7ff);border:1px solid var(--border);border-radius:32px;padding:30px;box-shadow:var(--shadow);}
+.hero-card h2{font-family:'Montserrat','Inter',Arial,sans-serif;color:var(--navy);letter-spacing:-.04em;font-size:1.75rem;margin-bottom:16px;}
+.check-list{list-style:none;display:grid;gap:13px;margin-top:18px;}
+.check-list li{display:flex;gap:11px;color:var(--muted);line-height:1.55;font-weight:600;}
+.check{width:24px;height:24px;border-radius:999px;background:rgba(31,111,229,.10);color:var(--blue);display:grid;place-items:center;flex:0 0 auto;font-weight:900;}
+section{padding:62px 0;}
+.light-section{background:linear-gradient(180deg,#f7fbff,#ffffff);border-top:1px solid #eaf1fb;border-bottom:1px solid #eaf1fb;}
+.section-head{text-align:center;max-width:860px;margin:0 auto 32px;}
+.section-kicker{color:var(--blue);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:900;margin-bottom:10px;}
+h2{font-family:'Montserrat','Inter',Arial,sans-serif;font-size:clamp(1.8rem,3vw,2.65rem);letter-spacing:-.045em;line-height:1.12;color:var(--navy);margin-bottom:13px;}
+.lead{color:var(--muted);line-height:1.7;font-size:1.03rem;}
+.cards{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;}
+.card{grid-column:span 4;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-soft);transition:.18s ease;}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+.card-icon{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;background:linear-gradient(135deg,#eef6ff,#ffffff);border:1px solid var(--border);font-size:1.65rem;margin-bottom:16px;}
+.card h3{color:var(--navy);font-size:1.12rem;margin-bottom:10px;}
+.card p{color:var(--muted);line-height:1.65;font-size:.96rem;}
+.cta-box{background:linear-gradient(135deg,var(--navy),#063B7E);border-radius:30px;padding:44px 26px;text-align:center;color:#fff;box-shadow:var(--shadow);}
+.cta-box h2{color:#fff;}
+.cta-box .lead{color:rgba(255,255,255,.78);}
+.cta-box .btn-secondary{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.22);}
+.mail{margin-top:18px;color:rgba(255,255,255,.85);font-weight:800;}
+.mail a{color:var(--orange);}
+.footer{margin-top:18px;color:rgba(255,255,255,.58);font-size:.9rem;}
+.whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:9998;width:58px;height:58px;border-radius:999px;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 16px 40px rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.8);transition:.18s ease;font-size:1.55rem;}
+.whatsapp-float:hover{transform:translateY(-3px) scale(1.03);}
+@media (max-width:980px){.topbar-inner{flex-direction:column;}.nav{justify-content:center;}.hero-grid{grid-template-columns:1fr;}.card{grid-column:span 6;}}
+@media (max-width:640px){.wrap{padding:0 16px;}.topbar-inner{padding:14px 16px;}.brand-logo{height:48px;}.hero{padding:46px 0 34px;}.hero-actions{flex-direction:column;}.btn{width:100%;}.hero-card{padding:22px;}.card{grid-column:span 12;}section{padding:46px 0;}.whatsapp-float{right:16px;bottom:16px;width:54px;height:54px;}}
+</style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html" aria-label="ThinkBI">
+        <img src="Logo - Clean  v1.png" alt="ThinkBI" class="brand-logo">
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="#solucao">Solução</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="diagnostico.html" class="nav-cta">Diagnóstico Gratuito</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Business Intelligence · Portugal</div>
+          <h1>Soluções de <span>Business Intelligence</span> para empresas em crescimento.</h1>
+          <p>A ThinkBI cria soluções de Business Intelligence que ligam dados, processos e indicadores para apoiar decisões mais rápidas, consistentes e baseadas em informação real.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="diagnostico.html">Agendar Diagnóstico Gratuito</a>
+            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20Gratuito." target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h2>O que a ThinkBI ajuda a resolver?</h2>
+          <ul class="check-list">
+            <li><span class="check">✓</span> Dados espalhados por ERP, Excel, CRM, WMS ou bases SQL.</li>
+<li><span class="check">✓</span> Falta de indicadores consistentes para gestão, vendas, operação ou direção.</li>
+<li><span class="check">✓</span> Relatórios manuais, demorados e difíceis de validar.</li>
+<li><span class="check">✓</span> Necessidade de preparar dados para análise avançada e Inteligência Artificial.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    
+    <section id="solucao" class="light-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Business Intelligence</div>
+          <h2>Da origem dos dados à decisão de gestão.</h2>
+          <p class="lead">A ThinkBI trabalha a cadeia completa: fontes de dados, integração, modelação, indicadores e dashboards.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+              <div class="card-icon">🏢</div>
+              <h3>Integração ERP</h3>
+              <p>Análise e integração de dados provenientes de sistemas como PHC, SAGE X3, Primavera, SAP, Business Central e outros.</p>
+            </article>
+<article class="card">
+              <div class="card-icon">📐</div>
+              <h3>KPIs e métricas</h3>
+              <p>Definição de indicadores alinhados com objetivos de negócio e realidade operacional.</p>
+            </article>
+<article class="card">
+              <div class="card-icon">📊</div>
+              <h3>Dashboards de gestão</h3>
+              <p>Visualização clara para administração, comercial, financeiro, stocks, produção e operação.</p>
+            </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Benefícios</div>
+          <h2>Business Intelligence aplicado à realidade da empresa.</h2>
+          <p class="lead">A solução deve ser prática, utilizável e ajustada ao contexto da organização.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+              <div class="card-icon">🎯</div>
+              <h3>Foco na decisão</h3>
+              <p>Indicadores claros para perceber o que está a acontecer e onde agir.</p>
+            </article>
+<article class="card">
+              <div class="card-icon">🔄</div>
+              <h3>Processos automatizados</h3>
+              <p>Menos tempo em tarefas manuais e mais tempo em análise.</p>
+            </article>
+<article class="card">
+              <div class="card-icon">🧠</div>
+              <h3>Base para IA</h3>
+              <p>Dados estruturados e governados para futura aplicação de Inteligência Artificial.</p>
+            </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contacto">
+      <div class="wrap">
+        <div class="cta-box">
+          <div class="section-kicker" style="color:var(--orange)">Diagnóstico BI Gratuito</div>
+          <h2>Vamos perceber onde os seus dados podem gerar mais valor?</h2>
+          <p class="lead">
+            Uma conversa inicial para avaliar a realidade atual da empresa e identificar oportunidades
+            em Power BI, SQL, ETL, ERP e IA.
+          </p>
+
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="btn btn-primary" style="background:linear-gradient(135deg,var(--orange),#f59e0b);color:#061B3A;" href="diagnostico.html">Agendar Diagnóstico Gratuito</a>
+            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20Gratuito." target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+            <a class="btn btn-secondary" href="mailto:geral@thinkbi.pt">✉️ Enviar email</a>
+          </div>
+
+          <div class="mail">✉️ <a href="mailto:geral@thinkbi.pt">geral@thinkbi.pt</a></div>
+          <div class="footer">© ThinkBI — Consultoria BI, Power BI, SQL & IA</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="whatsapp-float" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20Gratuito." target="_blank" rel="noopener" aria-label="Falar com a ThinkBI por WhatsApp" title="Falar por WhatsApp">💬</a>
+</body>
+</html>

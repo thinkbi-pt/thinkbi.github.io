@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Free BI Diagnostic - ThinkBI</title>
-  <meta name="description" content="Schedule a free Business Intelligence diagnostic session to assess opportunities in Power BI, SQL, ETL, ERP, Excel and Artificial Intelligence." />
+  <title>Free BI & AI Diagnostic - ThinkBI</title>
+  <meta name="description" content="Schedule a free BI & AI diagnostic session to assess opportunities in Power BI, SQL, ETL, ERP, Excel, automation and Artificial Intelligence applied to business." />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WX3JMPTLQ4"></script>
   <script>
@@ -18,6 +18,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
 
   <style>
     :root{
@@ -52,329 +55,84 @@
     a{text-decoration:none;color:inherit;}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 22px;}
 
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(255,255,255,.86);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(221,232,247,.75);
-    }
+    .topbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid rgba(221,232,247,.75);}
+    .topbar-inner{max-width:var(--max);margin:0 auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:26px;}
+    .brand{display:flex;align-items:center;gap:12px;min-width:190px;}
+    .brand-logo{height:58px;width:auto;display:block;filter:drop-shadow(0 8px 20px rgba(6,27,58,.10));}
 
-    .topbar-inner{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:18px 22px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:26px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      min-width:190px;
-    }
-
-    .brand-logo{
-      height:58px;
-      width:auto;
-      display:block;
-      filter:drop-shadow(0 8px 20px rgba(6,27,58,.10));
-    }
-
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:flex-end;
-      gap:6px;
-      flex-wrap:wrap;
-    }
-
-    .nav a{
-      padding:10px 12px;
-      color:#1a2d49;
-      font-weight:700;
-      font-size:.94rem;
-      border-radius:12px;
-      transition:.16s ease;
-    }
-
+    .nav{display:flex;align-items:center;justify-content:flex-end;gap:6px;flex-wrap:wrap;}
+    .nav a{padding:10px 12px;color:#1a2d49;font-weight:700;font-size:.94rem;border-radius:12px;transition:.16s ease;}
     .nav a:hover{background:var(--soft-2);color:var(--blue);}
+    .nav a.nav-cta{margin-left:4px;background:linear-gradient(135deg,var(--navy),#083b7c);color:#fff;padding:12px 16px;box-shadow:0 12px 28px rgba(6,27,58,.18);}
+    .lang-switch{background:#fff;border:1px solid var(--border);color:var(--navy) !important;box-shadow:var(--shadow-soft);}
+    .lang-switch:hover{background:var(--soft-2) !important;color:var(--blue) !important;}
 
-    .nav a.nav-cta{
-      margin-left:4px;
-      background:linear-gradient(135deg,var(--navy),#083b7c);
-      color:#fff;
-      padding:12px 16px;
-      box-shadow:0 12px 28px rgba(6,27,58,.18);
-    }
-
-    .lang-switch{
-      background:#fff;
-      border:1px solid var(--border);
-      color:var(--navy) !important;
-      box-shadow:var(--shadow-soft);
-    }
-
-    .lang-switch:hover{
-      background:var(--soft-2) !important;
-      color:var(--blue) !important;
-    }
-
-
-    .hero{
-      padding:78px 0 54px;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1fr .82fr;
-      gap:44px;
-      align-items:center;
-    }
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      background:#fff;
-      border:1px solid var(--border);
-      color:var(--blue);
-      padding:8px 13px;
-      border-radius:999px;
-      font-weight:900;
-      font-size:.92rem;
-      box-shadow:var(--shadow-soft);
-      margin-bottom:20px;
-    }
-
-    h1{
-      font-family:'Montserrat','Inter',Arial,sans-serif;
-      font-size:clamp(2.45rem,5vw,4.55rem);
-      line-height:1.03;
-      letter-spacing:-.06em;
-      color:var(--navy);
-      margin-bottom:22px;
-    }
-
+    .hero{padding:78px 0 54px;}
+    .hero-grid{display:grid;grid-template-columns:1fr .82fr;gap:44px;align-items:center;}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);color:var(--blue);padding:8px 13px;border-radius:999px;font-weight:900;font-size:.92rem;box-shadow:var(--shadow-soft);margin-bottom:20px;}
+    h1{font-family:'Montserrat','Inter',Arial,sans-serif;font-size:clamp(2.45rem,5vw,4.55rem);line-height:1.03;letter-spacing:-.06em;color:var(--navy);margin-bottom:22px;}
     h1 span{color:var(--blue);}
+    .hero p{color:var(--muted);max-width:720px;font-size:1.1rem;line-height:1.75;}
 
-    .hero p{
-      color:var(--muted);
-      max-width:720px;
-      font-size:1.1rem;
-      line-height:1.75;
-    }
-
-    .hero-actions{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-top:30px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      border-radius:14px;
-      padding:15px 20px;
-      font-weight:900;
-      transition:.18s ease;
-      border:1px solid transparent;
-    }
-
-    .btn-primary{
-      background:linear-gradient(135deg,var(--navy),#093f83);
-      color:#fff;
-      box-shadow:0 15px 34px rgba(6,27,58,.18);
-    }
-
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:14px;padding:15px 20px;font-weight:900;transition:.18s ease;border:1px solid transparent;}
+    .btn-primary{background:linear-gradient(135deg,var(--navy),#093f83);color:#fff;box-shadow:0 15px 34px rgba(6,27,58,.18);}
     .btn-primary:hover,.btn-secondary:hover{transform:translateY(-2px);}
+    .btn-secondary{background:#fff;color:var(--navy);border-color:#bcd1ee;box-shadow:var(--shadow-soft);}
 
-    .btn-secondary{
-      background:#fff;
-      color:var(--navy);
-      border-color:#bcd1ee;
-      box-shadow:var(--shadow-soft);
-    }
-
-    .diagnostic-card{
-      background:linear-gradient(145deg,#ffffff,#f1f7ff);
-      border:1px solid var(--border);
-      border-radius:32px;
-      padding:30px;
-      box-shadow:var(--shadow);
-    }
-
-    .diagnostic-card h2{
-      color:var(--navy);
-      font-family:'Montserrat','Inter',Arial,sans-serif;
-      font-size:1.8rem;
-      letter-spacing:-.04em;
-      margin-bottom:16px;
-    }
-
-    .check-list{
-      display:grid;
-      gap:13px;
-      list-style:none;
-      margin-top:18px;
-    }
-
-    .check-list li{
-      display:flex;
-      gap:11px;
-      color:var(--muted);
-      line-height:1.55;
-      font-weight:600;
-    }
-
-    .check{
-      width:24px;
-      height:24px;
-      border-radius:999px;
-      background:rgba(31,111,229,.10);
-      color:var(--blue);
-      display:grid;
-      place-items:center;
-      flex:0 0 auto;
-      font-weight:900;
-    }
-
-    .mini-kpis{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:12px;
-      margin-top:24px;
-    }
-
-    .mini-kpi{
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:18px;
-      padding:16px;
-    }
-
-    .mini-kpi strong{
-      display:block;
-      color:var(--navy);
-      font-size:1.5rem;
-      margin-bottom:4px;
-    }
-
-    .mini-kpi span{
-      color:var(--muted);
-      font-size:.9rem;
-      font-weight:700;
-    }
+    .diagnostic-card{background:linear-gradient(145deg,#ffffff,#f1f7ff);border:1px solid var(--border);border-radius:32px;padding:30px;box-shadow:var(--shadow);}
+    .diagnostic-card h2{color:var(--navy);font-family:'Montserrat','Inter',Arial,sans-serif;font-size:1.8rem;letter-spacing:-.04em;margin-bottom:16px;}
+    .check-list{display:grid;gap:13px;list-style:none;margin-top:18px;}
+    .check-list li{display:flex;gap:11px;color:var(--muted);line-height:1.55;font-weight:600;}
+    .check{width:24px;height:24px;border-radius:999px;background:rgba(31,111,229,.10);color:var(--blue);display:grid;place-items:center;flex:0 0 auto;font-weight:900;}
+    .mini-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px;}
+    .mini-kpi{background:#fff;border:1px solid var(--border);border-radius:18px;padding:16px;}
+    .mini-kpi strong{display:block;color:var(--navy);font-size:1.5rem;margin-bottom:4px;}
+    .mini-kpi span{color:var(--muted);font-size:.9rem;font-weight:700;}
 
     section{padding:62px 0;}
-    .light-section{
-      background:linear-gradient(180deg,#f7fbff,#ffffff);
-      border-top:1px solid #eaf1fb;
-      border-bottom:1px solid #eaf1fb;
-    }
-
+    .light-section{background:linear-gradient(180deg,#f7fbff,#ffffff);border-top:1px solid #eaf1fb;border-bottom:1px solid #eaf1fb;}
     .section-head{text-align:center;max-width:840px;margin:0 auto 32px;}
     .section-kicker{color:var(--blue);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:900;margin-bottom:10px;}
     h2{font-family:'Montserrat','Inter',Arial,sans-serif;font-size:clamp(1.8rem,3vw,2.65rem);letter-spacing:-.045em;line-height:1.12;color:var(--navy);margin-bottom:13px;}
     .lead{color:var(--muted);line-height:1.7;font-size:1.03rem;}
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:18px;
-    }
-
-    .card{
-      grid-column:span 4;
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:24px;
-      box-shadow:var(--shadow-soft);
-      transition:.18s ease;
-    }
-
+    .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;}
+    .card{grid-column:span 4;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-soft);transition:.18s ease;}
     .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
     .card-icon{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;background:linear-gradient(135deg,#eef6ff,#ffffff);border:1px solid var(--border);font-size:1.65rem;margin-bottom:16px;}
     .card h3{color:var(--navy);font-size:1.12rem;margin-bottom:10px;}
     .card p{color:var(--muted);line-height:1.65;font-size:.96rem;}
 
-    .process{
-      counter-reset:step;
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-    }
+    .ai-band{background:linear-gradient(135deg,var(--navy),#073b7a);border-radius:30px;padding:34px;color:#fff;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;}
+    .ai-band h2{color:#fff;}
+    .ai-band p{color:rgba(255,255,255,.78);line-height:1.7;}
+    .ai-band .section-kicker{color:var(--orange);}
+    .ai-list{display:grid;gap:12px;list-style:none;}
+    .ai-list li{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:14px;color:rgba(255,255,255,.80);line-height:1.5;}
+    .ai-list strong{color:#fff;display:block;margin-bottom:4px;}
 
-    .step{
-      position:relative;
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:26px 22px;
-      box-shadow:var(--shadow-soft);
-    }
-
-    .step::before{
-      counter-increment:step;
-      content:counter(step);
-      width:38px;
-      height:38px;
-      border-radius:13px;
-      display:grid;
-      place-items:center;
-      background:linear-gradient(135deg,var(--blue),var(--blue-2));
-      color:#fff;
-      font-weight:900;
-      margin-bottom:16px;
-    }
-
+    .process{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+    .step{position:relative;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:26px 22px;box-shadow:var(--shadow-soft);}
+    .step::before{counter-increment:step;content:counter(step);width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--blue-2));color:#fff;font-weight:900;margin-bottom:16px;}
     .step h3{color:var(--navy);margin-bottom:9px;}
     .step p{color:var(--muted);line-height:1.62;}
 
-    .cta-box{
-      background:linear-gradient(135deg,var(--navy),#063B7E);
-      border-radius:30px;
-      padding:44px 26px;
-      text-align:center;
-      color:#fff;
-      box-shadow:var(--shadow);
-    }
+    .cta-box{background:linear-gradient(135deg,var(--navy),#063B7E);border-radius:30px;padding:44px 26px;text-align:center;color:#fff;box-shadow:var(--shadow);}
     .cta-box h2{color:#fff;}
     .cta-box .lead{color:rgba(255,255,255,.78);}
     .cta-box .btn-secondary{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.22);}
+    .diagnostic-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px auto 0;max-width:900px;}
+    .diagnostic-highlight{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:18px;text-align:left;}
+    .diagnostic-highlight strong{display:block;color:#fff;margin-bottom:6px;}
+    .diagnostic-highlight span{display:block;color:rgba(255,255,255,.72);line-height:1.5;font-size:.92rem;}
     .mail{margin-top:18px;color:rgba(255,255,255,.85);font-weight:800;}
     .mail a{color:var(--orange);}
     .footer{margin-top:18px;color:rgba(255,255,255,.58);font-size:.9rem;}
-
     .legal{margin-top:16px;font-size:.86rem;}
     .legal a{color:rgba(255,255,255,.7);text-decoration:underline;text-underline-offset:3px;}
 
-    .whatsapp-float{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      z-index:9998;
-      width:58px;
-      height:58px;
-      border-radius:999px;
-      display:grid;
-      place-items:center;
-      background:#25D366;
-      color:#fff;
-      box-shadow:0 16px 40px rgba(0,0,0,.22);
-      border:1px solid rgba(255,255,255,.8);
-      transition:.18s ease;
-      font-size:1.55rem;
-    }
-
+    .whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:9998;width:58px;height:58px;border-radius:999px;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 16px 40px rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.8);transition:.18s ease;font-size:1.55rem;}
     .whatsapp-float:hover{transform:translateY(-3px) scale(1.03);}
 
     .modal{position:fixed;inset:0;display:none;z-index:10000;}
@@ -387,39 +145,19 @@
     .modal-body{line-height:1.65;color:#111827;}
     .modal-body h4{margin:14px 0 6px;color:var(--navy);}
 
-    @media (max-width:980px){
-      .topbar-inner{flex-direction:column;}
-      .nav{justify-content:center;}
-      .hero-grid{grid-template-columns:1fr;}
-      .card{grid-column:span 6;}
-      .process{grid-template-columns:1fr 1fr;}
-    }
-
-    @media (max-width:640px){
-      .wrap{padding:0 16px;}
-      .topbar-inner{padding:14px 16px;}
-      .brand-logo{height:48px;}
-      .hero{padding:46px 0 34px;}
-      .hero-actions{flex-direction:column;}
-      .btn{width:100%;}
-      .diagnostic-card{padding:22px;}
-      .mini-kpis{grid-template-columns:1fr;}
-      .card{grid-column:span 12;}
-      .process{grid-template-columns:1fr;}
-      section{padding:46px 0;}
-      .whatsapp-float{right:16px;bottom:16px;width:54px;height:54px;}
-    }
+    @media (max-width:980px){.topbar-inner{flex-direction:column;}.nav{justify-content:center;}.hero-grid{grid-template-columns:1fr;}.card{grid-column:span 6;}.process{grid-template-columns:1fr 1fr;}.ai-band{grid-template-columns:1fr;}.diagnostic-highlights{grid-template-columns:1fr;}}
+    @media (max-width:640px){.wrap{padding:0 16px;}.topbar-inner{padding:14px 16px;}.brand-logo{height:48px;}.hero{padding:46px 0 34px;}.hero-actions{flex-direction:column;}.btn{width:100%;}.diagnostic-card{padding:22px;}.mini-kpis{grid-template-columns:1fr;}.card{grid-column:span 12;}.process{grid-template-columns:1fr;}section{padding:46px 0;}.whatsapp-float{right:16px;bottom:16px;width:54px;height:54px;}}
   </style>
 </head>
 
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="index.html" aria-label="ThinkBI">
+      <a class="brand" href="index-en.html" aria-label="ThinkBI">
         <img src="Logo - Clean  v1.png" alt="ThinkBI" class="brand-logo">
       </a>
 
-      <nav class="nav" aria-label="Navegação principal">
+      <nav class="nav" aria-label="Main navigation">
         <a href="index-en.html">Home</a>
         <a href="#o-que-e">Diagnostic</a>
         <a href="#ia">AI</a>
@@ -434,16 +172,16 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow">Free BI Diagnostic · 30 minutes</div>
-          <h1>Discover where your data can create <span>more value</span>.</h1>
+          <div class="eyebrow">Free BI & AI Diagnostic · 30 minutes</div>
+          <h1>Discover where your data, processes and AI can create <span>more value</span>.</h1>
           <p>
             An initial conversation to assess your company’s current reality and identify opportunities
-            in Power BI, SQL, ETL, ERP, Excel and business-focused Artificial Intelligence.
+            in Power BI, SQL, ETL, ERP, Excel, automation and Artificial Intelligence applied to business.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:geral@thinkbi.pt?subject=Free BI Diagnostic Request">Schedule by email</a>
-            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20free%20BI%20diagnostic%20session." target="_blank" rel="noopener">💬 Talk on WhatsApp</a>
+            <a class="btn btn-primary" href="mailto:geral@thinkbi.pt?subject=BI%20%26%20AI%20Diagnostic%20Request">Schedule by email</a>
+            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20BI%20%26%20AI%20diagnostic%20session." target="_blank" rel="noopener">💬 Talk on WhatsApp</a>
           </div>
         </div>
 
@@ -453,7 +191,7 @@
             <li><span class="check">✓</span> Which data sources exist and how they can be integrated.</li>
             <li><span class="check">✓</span> Which critical indicators should be monitored.</li>
             <li><span class="check">✓</span> Where manual tasks can be automated.</li>
-            <li><span class="check">✓</span> How to prepare data for dashboards and AI securely.</li>
+            <li><span class="check">✓</span> Which practical opportunities exist to apply AI securely.</li>
           </ul>
 
           <div class="mini-kpis">
@@ -469,7 +207,7 @@
         <div class="section-head">
           <div class="section-kicker">When it makes sense</div>
           <h2>You have data, but not yet clear information?</h2>
-          <p class="lead">This diagnostic is designed for companies that want to improve reporting, control and decision-making with more reliable data.</p>
+          <p class="lead">This diagnostic is designed for companies that want to improve reporting, control, productivity and decision-making with more reliable data and practical AI usage.</p>
         </div>
 
         <div class="cards">
@@ -477,7 +215,7 @@
           <article class="card"><div class="card-icon">🏢</div><h3>Underused ERP</h3><p>The ERP contains data, but there is no clear view of sales, margins, stock, production or operations.</p></article>
           <article class="card"><div class="card-icon">⏱️</div><h3>Time-consuming reporting</h3><p>Reports created manually, dependent on people and difficult to update in time.</p></article>
           <article class="card"><div class="card-icon">📊</div><h3>Power BI needs structure</h3><p>Need for clear dashboards, consistent models and reliable metrics.</p></article>
-          <article class="card"><div class="card-icon">🧱</div><h3>Data without an analytical layer</h3><p>Lack of SQL, views, ETL or models prepared for analysis and growth.</p></article>
+          <article class="card"><div class="card-icon">🧱</div><h3>Data without an analytical layer</h3><p>Lack of SQL, views, ETL or models prepared for analysis, growth and AI.</p></article>
           <article class="card"><div class="card-icon">🧠</div><h3>Secure AI</h3><p>Interest in applying AI to business data without exposing sensitive or disorganized information.</p></article>
         </div>
       </div>
@@ -485,13 +223,33 @@
 
     <section id="ia">
       <div class="wrap">
+        <div class="ai-band">
+          <div>
+            <div class="section-kicker">ThinkBI AI Solutions</div>
+            <h2>AI needs organized data and clear processes.</h2>
+            <p>
+              Before applying Artificial Intelligence, it is essential to structure data, rules, permissions,
+              documentation and analytical models. ThinkBI helps build that foundation so AI becomes useful,
+              controlled and business-oriented.
+            </p>
+          </div>
+
+          <ul class="ai-list">
+            <li><strong>AI Start</strong>Diagnostic and simple roadmap to identify real AI opportunities.</li>
+            <li><strong>AI Office</strong>Productivity in emails, proposals, documents, procedures and file analysis.</li>
+            <li><strong>AI Data</strong>Data preparation with SQL, ETL, controlled views and Power BI.</li>
+            <li><strong>AI Business Assistant</strong>Internal assistants for information retrieval, analysis and decision support.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="light-section">
+      <div class="wrap">
         <div class="section-head">
-          <div class="section-kicker">Business Intelligence with AI</div>
-          <h2>AI needs organized data.</h2>
-          <p class="lead">
-            Before applying Artificial Intelligence, it is essential to structure data, rules, permissions and models.
-            ThinkBI helps build that foundation.
-          </p>
+          <div class="section-kicker">Areas assessed</div>
+          <h2>The diagnostic looks at data, processes and practical AI usage.</h2>
+          <p class="lead">The first conversation helps identify where quick wins exist and where it may make sense to evolve into a more structured project.</p>
         </div>
 
         <div class="cards">
@@ -502,11 +260,11 @@
       </div>
     </section>
 
-    <section id="processo" class="light-section">
+    <section id="processo">
       <div class="wrap">
         <div class="section-head">
           <div class="section-kicker">How it works</div>
-        <h2>Simple, direct and commitment-free process.</h2>
+          <h2>Simple, direct and commitment-free process.</h2>
           <p class="lead">The goal is not to sell a solution in a hurry. It is to understand whether there is a real improvement opportunity.</p>
         </div>
 
@@ -519,30 +277,36 @@
       </div>
     </section>
 
-    <section id="contacto">
+    <section id="contacto" class="light-section">
       <div class="wrap">
         <div class="cta-box">
-          <div class="section-kicker" style="color:var(--orange)">Schedule diagnostic</div>
+          <div class="section-kicker" style="color:var(--orange)">Schedule BI & AI diagnostic</div>
           <h2>Let’s understand the potential of your data.</h2>
           <p class="lead">
             Send a message with a brief description of your company’s current reality:
-            systems used, existing reports and main difficulties.
+            systems used, existing reports, main difficulties and areas where you would like to apply AI.
           </p>
 
+          <div class="diagnostic-highlights">
+            <div class="diagnostic-highlight"><strong>Data & Reporting</strong><span>Data sources, dashboards, Excel, ERP and management indicators.</span></div>
+            <div class="diagnostic-highlight"><strong>Processes & Automation</strong><span>Repetitive tasks, manual validations and efficiency opportunities.</span></div>
+            <div class="diagnostic-highlight"><strong>Applied AI</strong><span>Practical use cases for productivity, analysis and decision support.</span></div>
+          </div>
+
           <div class="hero-actions" style="justify-content:center;">
-            <a class="btn btn-primary" style="background:linear-gradient(135deg,var(--orange),#f59e0b);color:#061B3A;" href="mailto:geral@thinkbi.pt?subject=Free BI Diagnostic Request">Schedule by email</a>
-            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20free%20BI%20diagnostic%20session." target="_blank" rel="noopener">💬 Talk on WhatsApp</a>
+            <a class="btn btn-primary" style="background:linear-gradient(135deg,var(--orange),#f59e0b);color:#061B3A;" href="mailto:geral@thinkbi.pt?subject=BI%20%26%20AI%20Diagnostic%20Request">Schedule by email</a>
+            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20BI%20%26%20AI%20diagnostic%20session." target="_blank" rel="noopener">💬 Talk on WhatsApp</a>
           </div>
 
           <div class="mail">✉️ <a href="mailto:geral@thinkbi.pt">geral@thinkbi.pt</a></div>
           <div class="legal"><a href="#" data-open-legal="1">Legal</a></div>
-          <div class="footer">© ThinkBI — Diagnóstico BI, Power BI, SQL, ETL & IA</div>
+          <div class="footer">© ThinkBI — BI & AI Diagnostic, Power BI, SQL, ETL & Automation</div>
         </div>
       </div>
     </section>
   </main>
 
-  <a class="whatsapp-float" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20free%20BI%20diagnostic%20session." target="_blank" rel="noopener" aria-label="Talk to ThinkBI on WhatsApp" title="Talk on WhatsApp">💬</a>
+  <a class="whatsapp-float" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20BI%20%26%20AI%20diagnostic%20session." target="_blank" rel="noopener" aria-label="Talk to ThinkBI on WhatsApp" title="Talk on WhatsApp">💬</a>
 
   <div class="modal" id="legalModal" aria-hidden="true">
     <div class="modal-backdrop" data-close-legal="1"></div>
@@ -553,7 +317,7 @@
       </div>
       <div class="modal-body">
         <h4>Legal Information</h4>
-        <p><strong>ThinkBI®</strong> é uma marca registada utilizada no âmbito de atividade profissional independente em Portugal.</p>
+        <p><strong>ThinkBI®</strong> is a registered trademark used within independent professional activity in Portugal.</p>
         <p><strong>Contact:</strong> <a href="mailto:geral@thinkbi.pt">geral@thinkbi.pt</a></p>
 
         <h4>Privacy</h4>

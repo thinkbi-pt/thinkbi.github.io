@@ -127,7 +127,6 @@
       color:var(--blue) !important;
     }
 
-
     .hero{
       padding:78px 0 54px;
       position:relative;
@@ -306,6 +305,146 @@
       border-bottom:1px solid #eaf1fb;
     }
 
+    .ai-section{
+      position:relative;
+      background:
+        radial-gradient(650px 300px at 12% 12%, rgba(31,163,255,.16), transparent 64%),
+        radial-gradient(600px 330px at 88% 18%, rgba(243,168,35,.14), transparent 62%),
+        linear-gradient(180deg,#ffffff 0%,#f4f9ff 100%);
+      border-top:1px solid #eaf1fb;
+      border-bottom:1px solid #eaf1fb;
+    }
+
+    .ai-hero-box{
+      background:linear-gradient(135deg,var(--navy),#073b7a);
+      color:#fff;
+      border-radius:30px;
+      padding:34px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:28px;
+      align-items:center;
+      margin-bottom:24px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .ai-hero-box:after{
+      content:"";
+      position:absolute;
+      width:360px;
+      height:360px;
+      border-radius:999px;
+      right:-120px;
+      top:-130px;
+      background:rgba(31,163,255,.20);
+    }
+
+    .ai-hero-box h2{color:#fff;margin-bottom:12px;}
+    .ai-hero-box p{color:rgba(255,255,255,.78);line-height:1.7;position:relative;z-index:1;}
+    .ai-hero-box .section-kicker{color:var(--orange);position:relative;z-index:1;}
+    .ai-hero-box .hero-actions{position:relative;z-index:1;margin-top:24px;}
+    .ai-hero-box .btn-secondary{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.22);}
+
+    .ai-flow{
+      position:relative;
+      z-index:1;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:24px;
+      padding:20px;
+    }
+
+    .ai-flow-item{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      padding:13px 0;
+      border-bottom:1px solid rgba(255,255,255,.13);
+    }
+
+    .ai-flow-item:last-child{border-bottom:0;}
+    .ai-flow-icon{width:34px;height:34px;border-radius:12px;background:rgba(255,255,255,.12);display:grid;place-items:center;flex:0 0 auto;}
+    .ai-flow-item strong{display:block;color:#fff;margin-bottom:3px;}
+    .ai-flow-item span{display:block;color:rgba(255,255,255,.72);font-size:.92rem;line-height:1.45;}
+
+    .ai-card{
+      border-top:4px solid var(--blue);
+    }
+
+    .ai-card.featured{
+      border-top-color:var(--orange);
+      background:linear-gradient(180deg,#ffffff,#fffaf0);
+    }
+
+    .ai-label{
+      display:inline-flex;
+      margin-top:14px;
+      padding:7px 10px;
+      border-radius:999px;
+      background:#eef6ff;
+      color:var(--blue);
+      font-size:.75rem;
+      font-weight:900;
+    }
+
+    .ai-note{
+      margin-top:22px;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow-soft);
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:16px;
+      align-items:flex-start;
+    }
+
+    .ai-note-icon{
+      width:48px;
+      height:48px;
+      border-radius:17px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#fff7e6,#ffffff);
+      border:1px solid #f7d99b;
+      font-size:1.5rem;
+    }
+
+    .ai-note h3{color:var(--navy);margin-bottom:7px;}
+    .ai-note p{color:var(--muted);line-height:1.65;}
+
+    .diagnostic-highlights{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin:26px auto 0;
+      max-width:900px;
+    }
+
+    .diagnostic-highlight{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:18px;
+      padding:18px;
+      text-align:left;
+    }
+
+    .diagnostic-highlight strong{
+      display:block;
+      color:#fff;
+      margin-bottom:6px;
+    }
+
+    .diagnostic-highlight span{
+      display:block;
+      color:rgba(255,255,255,.72);
+      line-height:1.5;
+      font-size:.92rem;
+    }
+
     .story-grid{
       display:grid;
       grid-template-columns:.9fr 1.1fr .75fr;
@@ -412,6 +551,8 @@
       .hero-visual{order:-1;}
       .trust-row{grid-template-columns:1fr 1fr;}
       .story-grid{grid-template-columns:1fr;}
+      .ai-hero-box{grid-template-columns:1fr;}
+      .diagnostic-highlights{grid-template-columns:1fr;}
       .card{grid-column:span 6;}
       .template-card{grid-column:span 6;}
     }
@@ -426,6 +567,7 @@
       .btn{width:100%;}
       .trust-row{grid-template-columns:1fr;}
       .card,.template-card{grid-column:span 12;}
+      .ai-note{grid-template-columns:1fr;}
       .kpis{grid-template-columns:repeat(2,1fr);}
       section{padding:46px 0;}
       .whatsapp-float{right:16px;bottom:16px;width:54px;height:54px;}
@@ -443,10 +585,11 @@
       <nav class="nav" aria-label="Navegação principal">
         <a href="#historia">Quem somos</a>
         <a href="#integracoes">Integrações</a>
+        <a href="#ai-solutions">IA</a>
         <a href="#servicos">Serviços</a>
         <a href="#templates">Reports</a>
         <a href="#beneficios">Benefícios</a>
-        <a href="diagnostico.html" class="nav-cta">Diagnóstico Gratuito</a>
+        <a href="diagnostico.html" class="nav-cta">Diagnóstico BI & IA</a>
         <a href="index-en.html" class="lang-switch">🌐 EN</a>
       </nav>
     </div>
@@ -460,12 +603,13 @@
           <h1>Transformamos dados em <span>decisões</span> que impulsionam o seu negócio.</h1>
           <p>
             Soluções de Business Intelligence com Power BI, SQL, ETL e Inteligência Artificial
-            para empresas que querem mais controlo, eficiência e resultados.
+            para empresas que querem transformar dados, processos e conhecimento em decisões mais rápidas.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="diagnostico.html">Agendar Diagnóstico Gratuito</a>
-            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20Gratuito." target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+            <a class="btn btn-primary" href="diagnostico.html">Agendar Diagnóstico BI & IA</a>
+            <a class="btn btn-secondary" href="#ai-solutions">Conhecer AI Solutions</a>
+            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20%26%20IA." target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
           </div>
         </div>
 
@@ -548,6 +692,118 @@
       </div>
     </section>
 
+    <section id="ai-solutions" class="ai-section">
+      <div class="wrap">
+        <div class="ai-hero-box">
+          <div>
+            <div class="section-kicker">ThinkBI AI Solutions</div>
+            <h2>Inteligência Artificial aplicada à realidade da sua empresa.</h2>
+            <p>
+              Ajudamos empresas a aplicar IA de forma prática, segura e orientada a resultados:
+              desde produtividade administrativa até análise de dados, documentação e apoio à decisão.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" style="background:linear-gradient(135deg,var(--orange),#f59e0b);color:#061B3A;" href="diagnostico.html">Avaliar oportunidades de IA</a>
+              <a class="btn btn-secondary" href="mailto:geral@thinkbi.pt?subject=ThinkBI%20AI%20Solutions">✉️ Falar sobre AI Solutions</a>
+            </div>
+          </div>
+
+          <div class="ai-flow" aria-label="Fluxo de implementação ThinkBI AI Solutions">
+            <div class="ai-flow-item">
+              <div class="ai-flow-icon">1</div>
+              <div><strong>Diagnóstico</strong><span>Identificação de processos, dados e tarefas com potencial de IA.</span></div>
+            </div>
+            <div class="ai-flow-item">
+              <div class="ai-flow-icon">2</div>
+              <div><strong>Preparação</strong><span>Organização de dados, documentos, regras e acessos controlados.</span></div>
+            </div>
+            <div class="ai-flow-item">
+              <div class="ai-flow-icon">3</div>
+              <div><strong>Implementação</strong><span>Criação de soluções práticas para equipas, análise e decisão.</span></div>
+            </div>
+            <div class="ai-flow-item">
+              <div class="ai-flow-icon">4</div>
+              <div><strong>Evolução</strong><span>Acompanhamento, melhoria contínua e novos casos de uso.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards">
+          <article class="card ai-card">
+            <div class="card-icon">🧭</div>
+            <h3>AI Start</h3>
+            <p>
+              Diagnóstico inicial para identificar oportunidades reais de aplicação de IA,
+              priorizar processos e definir um roadmap simples de implementação.
+            </p>
+            <span class="ai-label">Diagnóstico & roadmap</span>
+          </article>
+
+          <article class="card ai-card">
+            <div class="card-icon">📄</div>
+            <h3>AI Office</h3>
+            <p>
+              Soluções de IA para apoiar emails, propostas, documentação, procedimentos,
+              análise de ficheiros e tarefas administrativas repetitivas.
+            </p>
+            <span class="ai-label">Produtividade administrativa</span>
+          </article>
+
+          <article class="card ai-card featured">
+            <div class="card-icon">🗄️</div>
+            <h3>AI Data</h3>
+            <p>
+              Preparação de dados empresariais para IA, com SQL, ETL, views controladas,
+              Power BI e modelos de análise orientados ao negócio.
+            </p>
+            <span class="ai-label">Dados, SQL & Power BI</span>
+          </article>
+
+          <article class="card ai-card">
+            <div class="card-icon">🤖</div>
+            <h3>AI Business Assistant</h3>
+            <p>
+              Criação de assistentes internos para apoiar equipas na consulta de informação,
+              análise de indicadores, documentação e tomada de decisão.
+            </p>
+            <span class="ai-label">Assistentes internos</span>
+          </article>
+
+          <article class="card ai-card">
+            <div class="card-icon">🔐</div>
+            <h3>Dados controlados</h3>
+            <p>
+              Estruturação de acessos, fontes de dados e camadas de informação para utilização
+              de IA com maior segurança e controlo.
+            </p>
+            <span class="ai-label">Segurança & controlo</span>
+          </article>
+
+          <article class="card ai-card">
+            <div class="card-icon">🚀</div>
+            <h3>Implementação gradual</h3>
+            <p>
+              Começamos por casos de uso simples e evoluímos para soluções mais avançadas,
+              sempre adaptadas à maturidade digital da empresa.
+            </p>
+            <span class="ai-label">Evolução faseada</span>
+          </article>
+        </div>
+
+        <div class="ai-note">
+          <div class="ai-note-icon">💡</div>
+          <div>
+            <h3>IA com foco em negócio, não em moda tecnológica.</h3>
+            <p>
+              A ThinkBI combina experiência em ERP, SQL, ETL e Power BI com soluções de Inteligência Artificial
+              para criar valor real: menos tarefas manuais, melhor acesso à informação, dados mais organizados
+              e decisões mais rápidas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="historia">
       <div class="wrap story-grid">
         <div>
@@ -581,7 +837,7 @@
         <div class="cards">
           <article class="card"><div class="card-icon">📈</div><h3>Dashboards & Power BI</h3><p>Dashboards interativos, claros e focados no que realmente importa para a gestão.</p></article>
           <article class="card"><div class="card-icon">🧱</div><h3>SQL & ETL</h3><p>Estruturação, integração e transformação de dados com desempenho e fiabilidade.</p></article>
-          <article class="card"><div class="card-icon">🧠</div><h3>IA & Automação</h3><p>Aplicação de IA para análise, apoio à decisão, documentação e automação de reporting.</p></article>
+          <article class="card"><div class="card-icon">🧠</div><h3>IA & Automação</h3><p>Aplicação de IA para produtividade, análise de dados, documentação, apoio à decisão e automação de reporting.</p></article>
           <article class="card"><div class="card-icon">🎯</div><h3>Consultoria & Estratégia</h3><p>Acompanhamento próximo para definir indicadores, processos e soluções à medida.</p></article>
           <article class="card"><div class="card-icon">💶</div><h3>Margens & Custos</h3><p>Análise de custos, margens, faturação, desvios e rentabilidade por cliente, artigo ou área.</p></article>
           <article class="card"><div class="card-icon">🔐</div><h3>Dados Controlados</h3><p>Criação de modelos e views SQL controladas para reporting, análise e IA com maior segurança.</p></article>
@@ -667,9 +923,9 @@
         </div>
 
         <div class="cards">
-          <article class="card"><div class="card-icon">⚡</div><h3>Reporting mais rápido</h3><p>Redução do tempo gasto em tarefas manuais, ficheiros e validações repetitivas.</p></article>
-          <article class="card"><div class="card-icon">✅</div><h3>Dados mais fiáveis</h3><p>Indicadores consistentes entre departamentos, sistemas e relatórios.</p></article>
-          <article class="card"><div class="card-icon">🔎</div><h3>Mais visibilidade</h3><p>Identificação rápida de desvios, oportunidades, riscos e tendências.</p></article>
+          <article class="card"><div class="card-icon">⚡</div><h3>Reporting mais rápido</h3><p>Redução do tempo gasto em tarefas manuais, ficheiros, validações repetitivas e preparação de informação.</p></article>
+          <article class="card"><div class="card-icon">✅</div><h3>Dados mais fiáveis</h3><p>Indicadores consistentes entre departamentos, sistemas, dashboards e soluções de análise com IA.</p></article>
+          <article class="card"><div class="card-icon">🔎</div><h3>Mais visibilidade</h3><p>Identificação rápida de desvios, oportunidades, riscos, tendências e perguntas críticas para a gestão.</p></article>
         </div>
       </div>
     </section>
@@ -677,17 +933,32 @@
     <section id="contacto">
       <div class="wrap">
         <div class="contact-box">
-          <div class="section-kicker" style="color:var(--orange)">Diagnóstico BI Gratuito</div>
-          <h2>Vamos perceber onde os seus dados podem gerar mais valor?</h2>
+          <div class="section-kicker" style="color:var(--orange)">Diagnóstico BI & IA Gratuito</div>
+          <h2>Vamos perceber onde os seus dados, processos e IA podem gerar mais valor?</h2>
           <p class="lead">
             Uma conversa inicial para avaliar a realidade atual da empresa e identificar oportunidades
-            em Power BI, SQL, ETL, ERP e IA.
+            em Power BI, SQL, ETL, ERP, automação e Inteligência Artificial aplicada ao negócio.
           </p>
 
+          <div class="diagnostic-highlights">
+            <div class="diagnostic-highlight">
+              <strong>Dados & Reporting</strong>
+              <span>Avaliação de fontes de dados, dashboards, Excel, ERP e indicadores de gestão.</span>
+            </div>
+            <div class="diagnostic-highlight">
+              <strong>Processos & Automação</strong>
+              <span>Identificação de tarefas repetitivas, validações manuais e oportunidades de eficiência.</span>
+            </div>
+            <div class="diagnostic-highlight">
+              <strong>IA aplicada</strong>
+              <span>Levantamento de casos de uso práticos para produtividade, análise e apoio à decisão.</span>
+            </div>
+          </div>
+
           <div class="hero-actions" style="justify-content:center;">
-            <a class="btn btn-primary" style="background:linear-gradient(135deg,var(--orange),#f59e0b);color:#061B3A;" href="diagnostico.html">Agendar Diagnóstico Gratuito</a>
-            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20Gratuito." target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
-            <a class="btn btn-secondary" href="mailto:geral@thinkbi.pt">✉️ Enviar email</a>
+            <a class="btn btn-primary" style="background:linear-gradient(135deg,var(--orange),#f59e0b);color:#061B3A;" href="diagnostico.html">Agendar Diagnóstico BI & IA</a>
+            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20%26%20IA." target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+            <a class="btn btn-secondary" href="mailto:geral@thinkbi.pt?subject=Diagn%C3%B3stico%20BI%20%26%20IA">✉️ Enviar email</a>
           </div>
 
           <div class="mail">✉️ <a href="mailto:geral@thinkbi.pt">geral@thinkbi.pt</a></div>
@@ -698,7 +969,7 @@
     </section>
   </main>
 
-  <a class="whatsapp-float" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20Gratuito." target="_blank" rel="noopener" aria-label="Falar com a ThinkBI por WhatsApp" title="Falar por WhatsApp">💬</a>
+  <a class="whatsapp-float" href="https://wa.me/351965562200?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Diagn%C3%B3stico%20BI%20%26%20IA." target="_blank" rel="noopener" aria-label="Falar com a ThinkBI por WhatsApp" title="Falar por WhatsApp">💬</a>
 
   <div class="modal" id="legalModal" aria-hidden="true">
     <div class="modal-backdrop" data-close-legal="1"></div>

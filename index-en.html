@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>ThinkBI - Power BI, SQL, ETL & AI</title>
-  <meta name="description" content="ThinkBI helps companies turn scattered data from ERP, Excel, SQL Server and other platforms into clear, automated dashboards prepared for Artificial Intelligence." />
+  <meta name="description" content="ThinkBI helps companies turn scattered data from ERP, Excel, SQL Server and other platforms into clear, automated dashboards and practical Artificial Intelligence solutions for business decision-making." />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WX3JMPTLQ4"></script>
   <script>
@@ -18,6 +18,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
 
   <style>
     :root{
@@ -123,7 +126,6 @@
       background:var(--soft-2) !important;
       color:var(--blue) !important;
     }
-
 
     .hero{
       padding:78px 0 54px;
@@ -303,6 +305,130 @@
       border-bottom:1px solid #eaf1fb;
     }
 
+    .ai-section{
+      position:relative;
+      background:
+        radial-gradient(650px 300px at 12% 12%, rgba(31,163,255,.16), transparent 64%),
+        radial-gradient(600px 330px at 88% 18%, rgba(243,168,35,.14), transparent 62%),
+        linear-gradient(180deg,#ffffff 0%,#f4f9ff 100%);
+      border-top:1px solid #eaf1fb;
+      border-bottom:1px solid #eaf1fb;
+    }
+
+    .ai-hero-box{
+      background:linear-gradient(135deg,var(--navy),#073b7a);
+      color:#fff;
+      border-radius:30px;
+      padding:34px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:28px;
+      align-items:center;
+      margin-bottom:24px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .ai-hero-box:after{
+      content:"";
+      position:absolute;
+      width:360px;
+      height:360px;
+      border-radius:999px;
+      right:-120px;
+      top:-130px;
+      background:rgba(31,163,255,.20);
+    }
+
+    .ai-hero-box h2{color:#fff;margin-bottom:12px;}
+    .ai-hero-box p{color:rgba(255,255,255,.78);line-height:1.7;position:relative;z-index:1;}
+    .ai-hero-box .section-kicker{color:var(--orange);position:relative;z-index:1;}
+    .ai-hero-box .hero-actions{position:relative;z-index:1;margin-top:24px;}
+    .ai-hero-box .btn-secondary{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.22);}
+
+    .ai-flow{
+      position:relative;
+      z-index:1;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:24px;
+      padding:20px;
+    }
+
+    .ai-flow-item{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      padding:13px 0;
+      border-bottom:1px solid rgba(255,255,255,.13);
+    }
+
+    .ai-flow-item:last-child{border-bottom:0;}
+    .ai-flow-icon{width:34px;height:34px;border-radius:12px;background:rgba(255,255,255,.12);display:grid;place-items:center;flex:0 0 auto;}
+    .ai-flow-item strong{display:block;color:#fff;margin-bottom:3px;}
+    .ai-flow-item span{display:block;color:rgba(255,255,255,.72);font-size:.92rem;line-height:1.45;}
+
+    .ai-card{border-top:4px solid var(--blue);}
+    .ai-card.featured{border-top-color:var(--orange);background:linear-gradient(180deg,#ffffff,#fffaf0);}
+
+    .ai-label{
+      display:inline-flex;
+      margin-top:14px;
+      padding:7px 10px;
+      border-radius:999px;
+      background:#eef6ff;
+      color:var(--blue);
+      font-size:.75rem;
+      font-weight:900;
+    }
+
+    .ai-note{
+      margin-top:22px;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow-soft);
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:16px;
+      align-items:flex-start;
+    }
+
+    .ai-note-icon{
+      width:48px;
+      height:48px;
+      border-radius:17px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#fff7e6,#ffffff);
+      border:1px solid #f7d99b;
+      font-size:1.5rem;
+    }
+
+    .ai-note h3{color:var(--navy);margin-bottom:7px;}
+    .ai-note p{color:var(--muted);line-height:1.65;}
+
+    .diagnostic-highlights{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin:26px auto 0;
+      max-width:900px;
+    }
+
+    .diagnostic-highlight{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:18px;
+      padding:18px;
+      text-align:left;
+    }
+
+    .diagnostic-highlight strong{display:block;color:#fff;margin-bottom:6px;}
+    .diagnostic-highlight span{display:block;color:rgba(255,255,255,.72);line-height:1.5;font-size:.92rem;}
+
     .story-grid{
       display:grid;
       grid-template-columns:.9fr 1.1fr .75fr;
@@ -409,6 +535,8 @@
       .hero-visual{order:-1;}
       .trust-row{grid-template-columns:1fr 1fr;}
       .story-grid{grid-template-columns:1fr;}
+      .ai-hero-box{grid-template-columns:1fr;}
+      .diagnostic-highlights{grid-template-columns:1fr;}
       .card{grid-column:span 6;}
       .template-card{grid-column:span 6;}
     }
@@ -423,6 +551,7 @@
       .btn{width:100%;}
       .trust-row{grid-template-columns:1fr;}
       .card,.template-card{grid-column:span 12;}
+      .ai-note{grid-template-columns:1fr;}
       .kpis{grid-template-columns:repeat(2,1fr);}
       section{padding:46px 0;}
       .whatsapp-float{right:16px;bottom:16px;width:54px;height:54px;}
@@ -437,13 +566,14 @@
         <img src="Logo - Clean  v1.png" alt="ThinkBI" class="brand-logo">
       </a>
 
-      <nav class="nav" aria-label="Navegação principal">
+      <nav class="nav" aria-label="Main navigation">
         <a href="#historia">About</a>
         <a href="#integracoes">Integrations</a>
+        <a href="#ai-solutions">AI</a>
         <a href="#servicos">Services</a>
         <a href="#templates">Reports</a>
         <a href="#beneficios">Benefits</a>
-        <a href="diagnostic.html" class="nav-cta">Free Diagnostic</a>
+        <a href="diagnostic.html" class="nav-cta">BI & AI Diagnostic</a>
         <a href="index.html" class="lang-switch">🌐 PT</a>
       </nav>
     </div>
@@ -457,27 +587,28 @@
           <h1>Turning business data into <span>decisions</span> that drive growth.</h1>
           <p>
             Business Intelligence solutions with Power BI, SQL, ETL and Artificial Intelligence
-            for companies that want more control, efficiency and better results.
+            for companies that want to turn data, processes and knowledge into faster decisions.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="diagnostic.html">Schedule Free Diagnostic</a>
-            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20free%20BI%20diagnostic%20session." target="_blank" rel="noopener">💬 Talk on WhatsApp</a>
+            <a class="btn btn-primary" href="diagnostic.html">Schedule BI & AI Diagnostic</a>
+            <a class="btn btn-secondary" href="#ai-solutions">Explore AI Solutions</a>
+            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20BI%20%26%20AI%20diagnostic%20session." target="_blank" rel="noopener">💬 Talk on WhatsApp</a>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Mockup de dashboard ThinkBI">
+        <div class="hero-visual" aria-label="ThinkBI dashboard mockup">
           <div class="laptop">
             <div class="screen">
               <div class="kpis">
-                <div class="kpi"><small>Receitas</small><strong>€1.230K</strong><span>+12.5%</span></div>
-                <div class="kpi"><small>Margem</small><strong>€320K</strong><span>+8.1%</span></div>
-                <div class="kpi"><small>Pedidos</small><strong>2.540</strong><span>+15.3%</span></div>
-                <div class="kpi"><small>Clientes</small><strong>1.210</strong><span>+10.2%</span></div>
+                <div class="kpi"><small>Revenue</small><strong>€1.230K</strong><span>+12.5%</span></div>
+                <div class="kpi"><small>Margin</small><strong>€320K</strong><span>+8.1%</span></div>
+                <div class="kpi"><small>Orders</small><strong>2.540</strong><span>+15.3%</span></div>
+                <div class="kpi"><small>Customers</small><strong>1.210</strong><span>+10.2%</span></div>
               </div>
               <div class="chart-grid">
                 <div class="chart-card">
-                  <strong style="color:var(--navy);font-size:.82rem;">Receita por mês</strong>
+                  <strong style="color:var(--navy);font-size:.82rem;">Monthly revenue</strong>
                   <div class="bars">
                     <div class="bar" style="height:45%"></div>
                     <div class="bar" style="height:62%"></div>
@@ -488,12 +619,12 @@
                   </div>
                 </div>
                 <div class="chart-card">
-                  <strong style="color:var(--navy);font-size:.82rem;">Objetivo</strong>
+                  <strong style="color:var(--navy);font-size:.82rem;">Target</strong>
                   <div class="donut"><span>62%</span></div>
                 </div>
               </div>
               <div class="chart-card" style="min-height:75px;">
-                <strong style="color:var(--navy);font-size:.82rem;">Evolução mensal</strong>
+                <strong style="color:var(--navy);font-size:.82rem;">Monthly trend</strong>
                 <div style="height:32px;margin-top:12px;background:linear-gradient(90deg,#dbeafe,#bfdbfe,#60a5fa,#1f6fe5);border-radius:999px;"></div>
               </div>
             </div>
@@ -540,7 +671,119 @@
           <article class="card"><div class="card-icon">📊</div><h3>Excel</h3><p>File consolidation, process automation and transformation of data into useful information.</p></article>
           <article class="card"><div class="card-icon">🔌</div><h3>APIs</h3><p>Connection to external platforms and online services through structured integrations.</p></article>
           <article class="card"><div class="card-icon">☁️</div><h3>Cloud</h3><p>Secure, scalable cloud solutions with controlled access to information.</p></article>
-          <article class="card"><div class="card-icon">🧠</div><h3>IA</h3><p>Application of Artificial Intelligence for analysis, documentation, forecasting and reporting automation.</p></article>
+          <article class="card"><div class="card-icon">🧠</div><h3>AI</h3><p>Application of Artificial Intelligence for analysis, documentation, forecasting and reporting automation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-solutions" class="ai-section">
+      <div class="wrap">
+        <div class="ai-hero-box">
+          <div>
+            <div class="section-kicker">ThinkBI AI Solutions</div>
+            <h2>Artificial Intelligence applied to your company’s reality.</h2>
+            <p>
+              We help companies apply AI in a practical, secure and results-oriented way:
+              from administrative productivity to data analysis, documentation and decision support.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" style="background:linear-gradient(135deg,var(--orange),#f59e0b);color:#061B3A;" href="diagnostic.html">Evaluate AI opportunities</a>
+              <a class="btn btn-secondary" href="mailto:geral@thinkbi.pt?subject=ThinkBI%20AI%20Solutions">✉️ Talk about AI Solutions</a>
+            </div>
+          </div>
+
+          <div class="ai-flow" aria-label="ThinkBI AI Solutions implementation flow">
+            <div class="ai-flow-item">
+              <div class="ai-flow-icon">1</div>
+              <div><strong>Diagnostic</strong><span>Identification of processes, data and tasks with AI potential.</span></div>
+            </div>
+            <div class="ai-flow-item">
+              <div class="ai-flow-icon">2</div>
+              <div><strong>Preparation</strong><span>Organization of data, documents, business rules and controlled access.</span></div>
+            </div>
+            <div class="ai-flow-item">
+              <div class="ai-flow-icon">3</div>
+              <div><strong>Implementation</strong><span>Creation of practical solutions for teams, analysis and decision-making.</span></div>
+            </div>
+            <div class="ai-flow-item">
+              <div class="ai-flow-icon">4</div>
+              <div><strong>Evolution</strong><span>Follow-up, continuous improvement and new business use cases.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards">
+          <article class="card ai-card">
+            <div class="card-icon">🧭</div>
+            <h3>AI Start</h3>
+            <p>
+              Initial diagnostic to identify real AI opportunities,
+              prioritize processes and define a simple implementation roadmap.
+            </p>
+            <span class="ai-label">Diagnostic & roadmap</span>
+          </article>
+
+          <article class="card ai-card">
+            <div class="card-icon">📄</div>
+            <h3>AI Office</h3>
+            <p>
+              AI solutions to support emails, proposals, documentation, procedures,
+              file analysis and repetitive administrative tasks.
+            </p>
+            <span class="ai-label">Administrative productivity</span>
+          </article>
+
+          <article class="card ai-card featured">
+            <div class="card-icon">🗄️</div>
+            <h3>AI Data</h3>
+            <p>
+              Preparation of business data for AI, using SQL, ETL, controlled views,
+              Power BI and business-oriented analytical models.
+            </p>
+            <span class="ai-label">Data, SQL & Power BI</span>
+          </article>
+
+          <article class="card ai-card">
+            <div class="card-icon">🤖</div>
+            <h3>AI Business Assistant</h3>
+            <p>
+              Creation of internal assistants to support teams in information retrieval,
+              indicator analysis, documentation and decision-making.
+            </p>
+            <span class="ai-label">Internal assistants</span>
+          </article>
+
+          <article class="card ai-card">
+            <div class="card-icon">🔐</div>
+            <h3>Controlled data</h3>
+            <p>
+              Structuring of access, data sources and information layers for AI usage
+              with greater security and control.
+            </p>
+            <span class="ai-label">Security & control</span>
+          </article>
+
+          <article class="card ai-card">
+            <div class="card-icon">🚀</div>
+            <h3>Gradual implementation</h3>
+            <p>
+              We start with simple use cases and evolve towards more advanced solutions,
+              always adapted to the company’s digital maturity.
+            </p>
+            <span class="ai-label">Phased evolution</span>
+          </article>
+        </div>
+
+        <div class="ai-note">
+          <div class="ai-note-icon">💡</div>
+          <div>
+            <h3>AI focused on business value, not technological hype.</h3>
+            <p>
+              ThinkBI combines experience in ERP, SQL, ETL and Power BI with Artificial Intelligence solutions
+              to create real value: fewer manual tasks, better access to information, more organized data
+              and faster decisions.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -578,7 +821,7 @@
         <div class="cards">
           <article class="card"><div class="card-icon">📈</div><h3>Dashboards & Power BI</h3><p>Interactive, clear dashboards focused on what truly matters for management.</p></article>
           <article class="card"><div class="card-icon">🧱</div><h3>SQL & ETL</h3><p>Data structuring, integration and transformation with performance and reliability.</p></article>
-          <article class="card"><div class="card-icon">🧠</div><h3>AI & Automation</h3><p>AI applied to analysis, decision support, documentation and reporting automation.</p></article>
+          <article class="card"><div class="card-icon">🧠</div><h3>AI & Automation</h3><p>AI applied to productivity, data analysis, documentation, decision support and reporting automation.</p></article>
           <article class="card"><div class="card-icon">🎯</div><h3>Consulting & Strategy</h3><p>Close support to define indicators, processes and tailored solutions.</p></article>
           <article class="card"><div class="card-icon">💶</div><h3>Margins & Costs</h3><p>Analysis of costs, margins, billing, variances and profitability by customer, item or area.</p></article>
           <article class="card"><div class="card-icon">🔐</div><h3>Controlled Data</h3><p>Creation of controlled models and SQL views for reporting, analysis and AI with greater security.</p></article>
@@ -664,9 +907,9 @@
         </div>
 
         <div class="cards">
-          <article class="card"><div class="card-icon">⚡</div><h3>Faster reporting</h3><p>Reduced time spent on manual tasks, files and repetitive validations.</p></article>
-          <article class="card"><div class="card-icon">✅</div><h3>More reliable data</h3><p>Consistent indicators across departments, systems and reports.</p></article>
-          <article class="card"><div class="card-icon">🔎</div><h3>More visibility</h3><p>Fast identification of deviations, opportunities, risks and trends.</p></article>
+          <article class="card"><div class="card-icon">⚡</div><h3>Faster reporting</h3><p>Reduced time spent on manual tasks, files, repetitive validations and information preparation.</p></article>
+          <article class="card"><div class="card-icon">✅</div><h3>More reliable data</h3><p>Consistent indicators across departments, systems, dashboards and AI-assisted analysis solutions.</p></article>
+          <article class="card"><div class="card-icon">🔎</div><h3>More visibility</h3><p>Fast identification of deviations, opportunities, risks, trends and critical management questions.</p></article>
         </div>
       </div>
     </section>
@@ -674,28 +917,43 @@
     <section id="contacto">
       <div class="wrap">
         <div class="contact-box">
-          <div class="section-kicker" style="color:var(--orange)">Free BI Diagnostic</div>
-          <h2>Let’s identify where your data can create more value.</h2>
+          <div class="section-kicker" style="color:var(--orange)">Free BI & AI Diagnostic</div>
+          <h2>Let’s identify where your data, processes and AI can create more value.</h2>
           <p class="lead">
             An initial conversation to assess your company’s current reality and identify opportunities
-            in Power BI, SQL, ETL, ERP and AI.
+            in Power BI, SQL, ETL, ERP, automation and Artificial Intelligence applied to business.
           </p>
 
+          <div class="diagnostic-highlights">
+            <div class="diagnostic-highlight">
+              <strong>Data & Reporting</strong>
+              <span>Assessment of data sources, dashboards, Excel, ERP and management indicators.</span>
+            </div>
+            <div class="diagnostic-highlight">
+              <strong>Processes & Automation</strong>
+              <span>Identification of repetitive tasks, manual validations and efficiency opportunities.</span>
+            </div>
+            <div class="diagnostic-highlight">
+              <strong>Applied AI</strong>
+              <span>Mapping of practical use cases for productivity, analysis and decision support.</span>
+            </div>
+          </div>
+
           <div class="hero-actions" style="justify-content:center;">
-            <a class="btn btn-primary" style="background:linear-gradient(135deg,var(--orange),#f59e0b);color:#061B3A;" href="diagnostic.html">Schedule Free Diagnostic</a>
-            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20free%20BI%20diagnostic%20session." target="_blank" rel="noopener">💬 Talk on WhatsApp</a>
-            <a class="btn btn-secondary" href="mailto:geral@thinkbi.pt">✉️ Send email</a>
+            <a class="btn btn-primary" style="background:linear-gradient(135deg,var(--orange),#f59e0b);color:#061B3A;" href="diagnostic.html">Schedule BI & AI Diagnostic</a>
+            <a class="btn btn-secondary" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20BI%20%26%20AI%20diagnostic%20session." target="_blank" rel="noopener">💬 Talk on WhatsApp</a>
+            <a class="btn btn-secondary" href="mailto:geral@thinkbi.pt?subject=BI%20%26%20AI%20Diagnostic">✉️ Send email</a>
           </div>
 
           <div class="mail">✉️ <a href="mailto:geral@thinkbi.pt">geral@thinkbi.pt</a></div>
           <div class="legal"><a href="#" data-open-legal="1">Legal</a></div>
-          <div class="footer">© ThinkBI — Consultoria BI, Power BI, SQL & IA</div>
+          <div class="footer">© ThinkBI — BI Consulting, Power BI, SQL & AI</div>
         </div>
       </div>
     </section>
   </main>
 
-  <a class="whatsapp-float" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20free%20BI%20diagnostic%20session." target="_blank" rel="noopener" aria-label="Talk to ThinkBI on WhatsApp" title="Talk on WhatsApp">💬</a>
+  <a class="whatsapp-float" href="https://wa.me/351965562200?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20BI%20%26%20AI%20diagnostic%20session." target="_blank" rel="noopener" aria-label="Talk to ThinkBI on WhatsApp" title="Talk on WhatsApp">💬</a>
 
   <div class="modal" id="legalModal" aria-hidden="true">
     <div class="modal-backdrop" data-close-legal="1"></div>
@@ -706,7 +964,7 @@
       </div>
       <div class="modal-body">
         <h4>Legal Information</h4>
-        <p><strong>ThinkBI®</strong> é uma marca registada utilizada no âmbito de atividade profissional independente em Portugal.</p>
+        <p><strong>ThinkBI®</strong> is a registered trademark used within independent professional activity in Portugal.</p>
         <p><strong>Contact:</strong> <a href="mailto:geral@thinkbi.pt">geral@thinkbi.pt</a></p>
 
         <h4>Privacy</h4>
@@ -728,7 +986,7 @@
 
       function openLB(src, title) {
         lbImg.src = src;
-        lbImg.alt = title ? ("ThinkBI Template — " + title) : "Template ThinkBI";
+        lbImg.alt = title ? ("ThinkBI Template — " + title) : "ThinkBI Template";
         lbTitle.textContent = title || "";
         lb.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
